@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Our Services";
+    ViewData["BodyClass"] = "careers-page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="career-main">
+    <section class="career-section">
+        <h1 class="career-title">Career at Anarcare</h1>
+        <div class="career-options">
+            <a asp-controller="Home" asp-action="employment" class="career-card">
+                <img src="~/images/career1.jpg" alt="Employment at Anarcare" />
+                <div class="career-label">
+                    <i class="bi bi-briefcase-fill"></i> Employment
+                </div>
+            </a>
+            <a asp-controller="Home" asp-action="volunteer" class="career-card">
+                <img src="~/images/getty-images-WctYsI5EksE-unsplash.jpg" alt="Volunteering at Anarcare" />
+                <div class="career-label">
+                    <i class="bi bi-people-fill"></i> Volunteers
+                </div>
+            </a>
+        </div>
+    </section>
+</main>

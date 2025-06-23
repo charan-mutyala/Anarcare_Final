@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Our Services";
+    ViewData["BodyClass"] = "volunteer-page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="volunteer-main">
+    <section class="volunteer-hero">
+        <h1>Volunteers</h1>
+        <img src="~/images/getty-images-WctYsI5EksE-unsplash.jpg" alt="Volunteer Helping" />
+        <p>
+            Volunteers are very important to us. Hospice volunteers provide essential support, including running errands, preparing meals, assistance with home activities, emotional and spiritual support.
+            Volunteers are screened and trained to assure a person is right for this work and are given an option of volunteer work.<br /><br />
+            5% budget goes to volunteers. Volunteers may choose their own schedule. Retired professionals are welcome.<br /><br />
+            Fill out the boxes below for an opportunity to become part of our team!
+        </p>
+    </section>
+
+    <div class="form-wrapper-background">
+        <section class="volunteer-form volunteer-form-section">
+              @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success">@TempData["Success"]</div>
+                }
+            <h2>Hospice Volunteers</h2>
+            <form method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name.." required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="e.g., example@domain.com" required />
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Age" min="0" required />
+
+                <label for="motivation">Motivation</label>
+                <textarea id="motivation" name="motivation" placeholder="Let us know what motivated you to join us.." required></textarea>
+
+                <button type="submit">SUBMIT</button>
+            </form>
+        </section>
+    </div>
+</main>

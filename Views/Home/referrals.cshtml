@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Referrals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<main class="referrals-main">
+    <!-- Title and Subtitle -->
+    <h1 class="referrals-title">Referrals</h1>
+
+    <!-- Subtitle aligned under form -->
+    <section class="referrals-header">
+        <div class="referrals-text">
+            <p class="referrals-subtitle">
+                We are here to support your loved ones with compassionate care. Please fill out the form below to submit a referral.
+            </p>
+        </div>
+    </section>
+
+    <!-- Layout: Image on Left, Form on Right -->
+    <section class="referral-layout">
+        <!-- Image Left -->
+        <div class="referral-image-box">
+            <img src="~/images/Refferals.webp" alt="Doctor with Patient" />
+            <p class="image-caption">"Your referral can make a difference in someone’s life."</p>
+        </div>
+
+        <!-- Form Right -->
+        <div class="referral-form-box">
+            @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success">@TempData["Success"]</div>
+                }
+            <form class="referral-form" method="post" asp-action="SubmitReferral">
+                <h2>Patient's Referral Form</h2>
+
+                <label for="referrer-name">Referral’s name</label>
+                <input type="text" id="referrer-name" name="ReferrerName" placeholder="Name" required />
+
+                <label for="referrer-phone">Referral’s phone</label>
+                <input type="tel" id="referrer-phone" name="ReferrerPhone" placeholder="Phone Number" required />
+
+                <label for="patient-name">Patient’s name</label>
+                <input type="text" id="patient-name" name="PatientName" placeholder="Name" required />
+
+                <label for="patient-phone">Patient’s phone</label>
+                <input type="tel" id="patient-phone" name="PatientPhone" placeholder="Phone Number" required />
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="Comments" placeholder="Tell us what do you want to know"></textarea>
+
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,158 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 hero-left" data-aos="fade-right">
+                    <h1>
+                        <span class="hero-line">AT <span class="highlight">ANAR</span><span class="highlight-red">CARE</span></span>
+                        <span class="hero-line">WE <span class="highlight-red">CARE</span></span>
+                    </h1>
+                    <p>
+                        Anarcare has been a family owned and locally operated home health and hospice agency since 2011.
+                        We manage patient needs and provide skilled professional assistance while collaborating with
+                        primary care providers and specialists to deliver optimal care.
+                    </p>
+                </div>
+                <div class="col-md-6 hero-right" data-aos="fade-left">
+                    <img src="~/images/Caregiver-patient.webp" alt="Caregiver with patient" class="img-fluid" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services">
+        <h2>What We Offer:</h2>
+        <div class="card-container">
+            <a asp-controller="AboutUs" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="0">
+                <img src="~/images/aboutus.webp" alt="About Us" loading="lazy" />
+                <p>About Us</p>
+            </a>
+            <a asp-controller="HospiceCare" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="~/images/Hospice-care.webp" alt="Hospice Care" loading="lazy" />
+                <p>Hospice Care</p>
+            </a>
+            <a asp-controller="HomeHealth" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="~/images/Home-health.webp" alt="Home Health" loading="lazy" />
+                <p>Home Health</p>
+            </a>
+            <a asp-controller="Referrals" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="~/images/Refferals.webp" alt="Referrals" loading="lazy" />
+                <p>Referrals</p>
+            </a>
+            <a asp-controller="Career" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="~/images/Careerseekers.webp" alt="Career Seekers" loading="lazy" />
+                <p>Career Seekers</p>
+            </a>
+            <a href="#contact" class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <img src="~/images/Contactus.webp" alt="Contact Us" loading="lazy" />
+                <p>Contact Us</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="info-boxes">
+        <a asp-controller="HospiceCare" asp-action="Index" class="clickable-box" data-aos="fade-up">
+            <img src="~/images/Hospicecare_icon.webp" alt="Hospice Icon" class="info-icon" loading="lazy" />
+            <ul>
+                <li>Pain and symptom management</li>
+                <li>Medications related to illness</li>
+                <li>Physician and nurse on call 24/7</li>
+                <li>Speech, physical, occupational therapy</li>
+                <li>Spiritual and dietary therapy</li>
+                <li>Bereavement Services</li>
+            </ul>
+            <span class="info-button">Learn more</span>
+        </a>
+
+        <a asp-controller="HomeHealth" asp-action="Index" class="clickable-box" data-aos="fade-up" data-aos-delay="100">
+            <img src="~/images/homehealth_icon.webp" alt="Home Health Icon" class="info-icon" loading="lazy" />
+            <ul>
+                <li>Wound Care, skilled nursing</li>
+                <li>Home Health Aide</li>
+                <li>Chronic conditions management</li>
+                <li>Medication Management</li>
+                <li>Diabetic teaching and care</li>
+                <li>Occupational & Speech Therapy</li>
+            </ul>
+            <span class="info-button">Learn more</span>
+        </a>
+    </section>
+
+    <section class="mission-section">
+        <div class="mission-content" data-aos="fade-in">
+            <img src="~/images/logoanarcare.png" alt="Anarcare Heart Logo" class="mission-logo" loading="lazy" />
+            <div class="mission-text">
+                <p>
+                    We strive to provide the highest quality of home health and hospice services. Our compassionate professionals are devoted to ensuring the best care for our community. Our agency is committed to helping our patients live life to the fullest in a secured and familiar surrounding, with the people who matter the most.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-form" data-aos="fade-right">
+            @if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+            <form asp-action="SubmitContact" asp-controller="Home" method="post">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name.." required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="e.g., example@domain.com" required />
+
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., (123) 456-7890" />
+
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" rows="4" placeholder="What do you want us to help you with..."></textarea>
+
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+
+        <div class="contact-info" data-aos="fade-left">
+            <div class="office-hours">
+                <p>Office Hours: Monday to Friday, 9:00 AM to 5:00 PM</p>
+            </div>
+            <div class="contact-highlight-box" data-aos="zoom-in">
+                <div class="emergency-heading">Need Help Now?</div>
+                <a href="tel:7133301964" class="highlight-phone">
+                    <i class="bi bi-telephone-fill"></i> (713) 330-1964
+                </a>
+                <p class="highlight-text">
+                    Our nurses and doctors are available 24 hours a day, 7 days a week for on-call care.
+                </p>
+            </div>
+            <div class="address-call-info">
+                <address class="map-address">
+                    <strong>Address:</strong><br />
+                    <a asp-controller="Home" asp-action="GoogleMap" target="_blank">
+                        13601 Woodforest Blvd.<br />
+                        Houston, TX 77015
+                    </a>
+                </address>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13854.994994472424!2d-95.2140792!3d29.7820006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c6dcdd47ae33%3A0x50a993104e6c8b3e!2s13601%20Woodforest%20Blvd%2C%20Houston%2C%20TX%2077015!5e0!3m2!1sen!2sus!4v1717673331227!5m2!1sen!2sus"
+            width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-note-container">
+            <p class="map-note">
+                Let us care for your loved ones as if they were our own. Contact Anarcare today to learn more about our services and how we can support you and your family. Serving Houston & Surrounding Area
+            </p>
+        </div>
+    </section>
+</main>
