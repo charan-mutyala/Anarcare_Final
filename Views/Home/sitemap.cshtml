@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Sitemap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-heading">
+    <h2>Sitemap</h2>
+</section>
+
+<main class="sitemap-container" style="padding: 40px;">
+    <ul style="list-style: none; padding-left: 0; font-size: 18px; line-height: 2;">
+        <li><strong>🏠 Home</strong> – <a asp-controller="Home" asp-action="Index">/</a></li>
+
+        <li><strong>🧑‍⚕️ About Us</strong> – <a asp-controller="Home" asp-action="AboutUs">/aboutus</a></li>
+
+        <li><strong>❤️ Services</strong> – <a asp-controller="Home" asp-action="Services">/services</a>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li><a asp-controller="Home" asp-action="HomeHealth">Home Health Care</a></li>
+                <li><a asp-controller="Home" asp-action="HospiceCare">Hospice Care</a></li>
+            </ul>
+        </li>
+
+        <li><strong>🤝 Careers</strong> – <a asp-controller="Home" asp-action="Careers">/careers</a>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li><a asp-controller="Home" asp-action="Employment">Employment Application</a></li>
+                <li><a asp-controller="Home" asp-action="Volunteer">Volunteer Form</a></li>
+            </ul>
+        </li>
+
+        <li><strong>📄 Referral Form</strong> – <a asp-controller="Home" asp-action="Referrals">/referral</a></li>
+
+        <li><strong>✉️ Contact</strong> – <a href="/#contactForm">/contact</a></li>
+
+        <li><strong>🗂 Technical SEO Files</strong>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li><a href="/robots.txt">robots.txt</a> – Search engine crawling rules</li>
+                <li><a href="/sitemap.xml">sitemap.xml</a> – XML sitemap for search engines</li>
+            </ul>
+        </li>
+    </ul>
+</main>

@@ -1,40 +1,289 @@
 @{
-    ViewData["Title"] = "Home Health";
+    ViewData["Title"] = "Home Health Care";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<main>
-    <section class="page-heading">
-        <h1>Home Health</h1>
-    </section>
+<!-- Page Heading -->
+<section class="page-heading">
+    <h2>Home Health Care</h2>
+</section>
 
-    <section class="service-section">
-        <div class="service-container">
-            <div class="service-image">
-                <img src="~/images/Home-health.jpg" alt="Home Health Care Patient" loading="lazy" />
-            </div>
-            <div class="service-content">
-                <h2>Home Health Care Services Include:</h2>
-                <ul>
-                    <li>Skilled Nursing</li>
-                    <li>Home Health Aide</li>
-                    <li>IV Therapy</li>
-                    <li>Diabetic Teaching and Management</li>
-                    <li>Wound Care</li>
-                    <li>Social Worker</li>
-                    <li>Private Pay Service</li>
-                    <li>Assessment, Observation and Reporting of Physical, Emotional and Psychological Symptoms</li>
-                    <li>Medication Management</li>
-                    <li>Conditions and Diseases</li>
-                    <li>Physical, Occupational and Speech Therapy</li>
-                </ul>
+<main class="hospice-container">
 
-                <h3>Who pays for Home Health Care?</h3>
-                <p>
-                    Generally, Medicare and/or Medicaid will cover the cost of Home Health services for those patients who meet either program’s eligibility requirements.<br />
-                    Private insurance companies, managed care organizations, and workers’ compensation plans may also pay for Home Health Services.
-                </p>
-            </div>
+    <!-- Section 1 -->
+    <section class="hospice-box image-left" data-aos="fade-up" data-aos-duration="900">
+        <div class="hospice-text">
+            <p>At Anarcare, we bring quality care directly to your home. Certain medical treatments and rehabilitative procedures that once required a hospital visit can now be provided where you’re most comfortable—at your home or wherever you live.</p>
+            <p>Home health care is more convenient and affordable, while maintaining the standards and effectiveness of medical facilities.</p>
+            <p>Our goal is to help patients recover from illness or injury, regain independence, and maintain or improve their daily function. Home health care supports your ability to live safely and confidently at home while helping prevent further health decline.</p>
+            <p>Insurance covers home health care services if certain conditions are met. If you have Medicare or other insurance plans, check your plan or contact your provider to understand covered benefits.</p>
+        </div>
+        <div class="hospice-img">
+            <img src="~/images/home_1.webp" alt="Home Health Nurse with Patient" />
         </div>
     </section>
+
+    <!-- Section 2 -->
+    <section class="hospice-box bg-alt" data-aos="fade-left" data-aos-duration="900">
+        <div class="hospice-img">
+            <img src="~/images/home_2.webp" alt="Doctor discussing eligibility" />
+        </div>
+        <div class="hospice-text">
+            <h3>Eligibility for Home Health Care</h3>
+            <p>You may qualify if:</p>
+            <ul>
+                <li>You are under the care of a doctor, NP, or PA with a reviewed care plan.</li>
+                <li>Your provider certifies the need for intermittent skilled nursing care, PT, OT, or speech therapy.</li>
+                <li>You are homebound (need help to leave home or leaving home is not recommended).</li>
+                <li>The home health agency is Medicare-certified.</li>
+                <li>You had a recent face-to-face visit with your provider for this need.</li>
+            </ul>
+            @* <p><strong>Note:</strong> Medicare defines "intermittent" as fewer than 7 days a week or less than 8 hours/day, up to 21 days.</p> *@
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+        <section class="hospice-box image-left bg-tan" data-aos="fade-up" data-aos-duration="900">
+            <div class="hospice-img">
+                <img src="~/images/home_3_1.webp" alt="Skilled Nursing" />
+            </div>
+            <div class="hospice-text">
+                <h3>Covered services include:</h3>
+                <h4>Skilled Nursing Care</h4>
+                <ul>
+                    <li>Services that require the expertise of a registered nurse (RN) or licensed practical nurse (LPN) under supervision of RN.</li>
+                    <li>A nurse can provide IV therapy, injections, wound care, tube feedings, diabetes and medication management per Physician Orders.</li>
+                    <li>
+                        Home Health Services must be part-time or intermittent:
+                        <ul style="list-style-type: circle; margin-left: 1.5rem;">
+                            <li>Less than 8 hours per day</li>
+                            <li>28 or fewer hours per week (up to 35 hours in special cases)</li>
+                            <li><em>Routine services like blood draws alone are not covered</em></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="hospice-box image-right" data-aos="fade-up" data-aos-duration="900">
+            <div class="hospice-img">
+                <img src="~/images/home_3_2.webp" alt="Therapy Services" />
+            </div>
+            <div class="hospice-text">
+                <h4>Therapy Services</h4>
+                <ul>
+                    <li>
+                        <strong>Physical therapy</strong>
+                        <ul style="list-style-type: circle; margin-left: 1.5rem;">
+                            <li>To restore physical function, prevent falls, etc.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Occupational therapy</strong>
+                        <ul style="list-style-type: circle; margin-left: 1.5rem;">
+                            <li>To restore activities of daily living.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Speech-language pathology</strong>
+                        <ul style="list-style-type: circle; margin-left: 1.5rem;">
+                            <li>To restore communication problems, speech disorders.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Therapy Services must be:</strong>
+                        <ul style="list-style-type: circle; margin-left: 1.5rem;">
+                            <li>Intended to restore function, improve mobility, or maintain your current condition</li>
+                            <li>Ordered by your Physician</li>
+                            <li>Safe and effective for your condition</li>
+                            <li>Complex enough to require a licensed therapist</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="hospice-box image-left bg-tan" data-aos="fade-up" data-aos-duration="900">
+            <div class="hospice-img">
+                <img src="~/images/home_3_3.webp" alt="Nursing Aide Services" />
+            </div>
+            <div class="hospice-text">
+                <h4>Home Health Nursing Aide Services</h4>
+                <ul>
+                    <li>Help with personal care including grooming, bathing, dressing, etc.</li>
+                    <li>Covered only under supervision of skilled nursing or therapy services</li>
+                </ul>
+            </div>
+        </section>
+        <section class="hospice-box image-right" data-aos="fade-up" data-aos-duration="900">
+            <div class="hospice-img">
+                <img src="~/images/home_3_4.webp" alt="Medical Social Services" />
+            </div>
+            <div class="hospice-text">
+                <h4>Medical Social Services</h4>
+                <ul>
+                    <li>Counseling and assistance with social or emotional issues</li>
+                    <li>Education and help with locating and applying for community resources</li>
+                    <li>Covered only as part of a skilled care plan</li>
+                </ul>
+            </div>
+        </section>
+
+
+
+
+    <!-- Section 4 -->
+    <section class="hospice-box bg-alt" data-aos="fade-right" data-aos-duration="900">
+        <div class="hospice-img">
+            <img src="~/images/home_4.webp" alt="Not covered services" />
+        </div>
+        <div class="hospice-text">
+            <h3>What’s Not Covered Under Home Health Care</h3>
+            <ul>
+                <li>24-hour care at home</li>
+                <li>Meal delivery</li>
+                <li>Homemaker services like shopping or cleaning</li>
+                <li>Personal care if it's the only care you need</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="hospice-box image-left" data-aos="fade-up" data-aos-duration="900">
+        <div class="hospice-text">
+            <h3>What You May Need to Pay</h3>
+            <p>You may be responsible for:</p>
+            <ul>
+                <li>Non-covered services (e.g., foot care)</li>
+                <li>Services your plan won’t cover in your specific case</li>
+            </ul>
+            <p>If so, you’ll receive an <strong>Advance Beneficiary Notice of Noncoverage (ABN)</strong>.</p>
+        </div>
+        <div class="hospice-img">
+            <img src="~/images/home_5.webp" alt="Family reviewing costs" />
+        </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="hospice-box bg-tan" data-aos="fade-left" data-aos-duration="900">
+        <div class="hospice-img">
+            <img src="~/images/home_6.webp" alt="Patient signing ABN" />
+        </div>
+        <div class="hospice-text">
+            <h3>Advance Beneficiary Notice of Noncoverage (ABN)</h3>
+            <p>You’ll receive an ABN when:</p>
+            <ul>
+                <li>Service is not considered medically necessary</li>
+                <li>Care is non-skilled (like bathing only)</li>
+                <li>You aren’t homebound or don’t need intermittent skilled care</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="hospice-box image-left" data-aos="fade-up" data-aos-duration="900">
+        <div class="hospice-text">
+            <h3>Home Health Change of Care Notice (HHCCN)</h3>
+            <p>You’ll receive a HHCCN if services are reduced or stopped due to:</p>
+            <ul>
+                <li>Changes in physician orders</li>
+                <li>Agency decision</li>
+            </ul>
+        </div>
+        <div class="hospice-img">
+            <img src="~/images/home_7.webp" alt="Care change discussion" />
+        </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="hospice-box bg-alt" data-aos="fade-right" data-aos-duration="900">
+        <div class="hospice-img">
+            <img src="~/images/home_8.webp" alt="Woman filing appeal" />
+        </div>
+        <div class="hospice-text">
+            <h3>Your Right to a Fast Appeal</h3>
+            <p>If Medicare-covered home health services are ending, you have the right to a fast appeal.</p>
+            <p>You’ll get a <strong>Notice of Medicare Non-Coverage (NOMNC)</strong> 2 days before services stop. It explains:</p>
+            <ul>
+                <li>End date of coverage</li>
+                <li>How to file an appeal</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 9 -->
+    <section class="hospice-box image-left" data-aos="fade-up" data-aos-duration="900">
+        <div class="hospice-text">
+            <h3>Getting Home Health Care</h3>
+            <p>You need a provider’s order. The agency will assess your condition at home, then work with your doctor on a care plan.</p>
+        </div>
+        <div class="hospice-img">
+            <img src="~/images/home_9.webp" alt="Starting care process" />
+        </div>
+    </section>
+
+    <!-- Section 10 -->
+    @* <section class="hospice-box bg-tan" data-aos="fade-left" data-aos-duration="900">
+        <div class="hospice-img">
+            <img src="~/images/Home-health.webp" alt="Care plan overview" />
+        </div>
+        <div class="hospice-text">
+            <h3>Your Plan of Care</h3>
+            <p>Your plan includes:</p>
+            <ul>
+                <li>Services and visit schedule</li>
+                <li>Involved health care professionals</li>
+                <li>Goals and equipment needs</li>
+            </ul>
+            <p>You have the right to participate in all decisions and include caregivers or family members.</p>
+        </div>
+    </section> *@
+
+    <!-- Section 11 -->
+    @* <section class="hospice-box image-left" data-aos="fade-up" data-aos-duration="900">
+        <div class="hospice-text">
+            <h3>Ongoing Review and Communication</h3>
+            <p>The plan is reviewed at least every 60 days. The team will:</p>
+            <ul>
+                <li>Update your doctor on your condition</li>
+                <li>Inform you of any changes</li>
+                <li>Educate you and your caregiver on managing your care</li>
+            </ul>
+        </div>
+        <div class="hospice-img">
+            <img src="~/images/Home-health.webp" alt="Doctor reviewing chart" />
+        </div>
+    </section> *@
+
+    <!-- Section 12 -->
+    <section class="hospice-box bg-alt" data-aos="fade-left" data-aos-duration="900">
+        <div class="hospice-img">
+            <img src="~/images/home_10.webp" alt="Patient reading rights" />
+        </div>
+        <div class="hospice-text">
+            <h3>Your Rights as a Home Health Patient</h3>
+            <ul>
+                <li>Be treated with respect and dignity</li>
+                <li>Receive clear information about services and payments</li>
+                <li>Make complaints and receive follow-up</li>
+                <li>Keep your information private</li>
+                <li>Access state and Medicare hotlines</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 13 -->
+    <section class="hospice-box image-left" data-aos="fade-up" data-aos-duration="900">
+        <div class="hospice-text">
+            <h3>Filing a Complaint</h3>
+            <p>If you have concerns, you may contact:</p>
+            <ul>
+                <li>Our Administrator at 713-330-1964</li>
+                <li>Your state’s home health hotline</li>
+                <li>BFCC-QIO via 1-800-MEDICARE</li>
+            </ul>
+        </div>
+        <div class="hospice-img">
+            <img src="~/images/home_11.webp" alt="Concerned patient calling" />
+        </div>
+    </section>
+
 </main>

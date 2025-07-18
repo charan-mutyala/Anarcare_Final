@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AnarcareWeb.Models
@@ -7,19 +8,21 @@ namespace AnarcareWeb.Models
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string FullName { get; set; } = string.Empty;
 
         [Required, EmailAddress]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
 
         [Required]
-        public string Phone { get; set; }
+        public string Phone { get; set; } = string.Empty;
 
         [Required]
-        public string Position { get; set; }
+        public string Position { get; set; } = string.Empty;
 
         public string? Comments { get; set; }
 
-        public string? ResumeFileName { get; set; }  // stores the uploaded filename
+        public DateTime SubmittedAt { get; set; } = DateTime.Now;
+
+        public string? ResumeUrl { get; set; }
     }
 }

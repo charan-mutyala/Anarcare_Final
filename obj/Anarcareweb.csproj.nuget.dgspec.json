@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VamshiKrishnaJanagam\\OneDrive - DRJanki\\Desktop\\Anarcareweb\\Anarcareweb.csproj": {}
+    "C:\\Users\\CharanTejaMutyala\\Downloads\\Anarcareweb_final\\Anarcareweb\\Anarcareweb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VamshiKrishnaJanagam\\OneDrive - DRJanki\\Desktop\\Anarcareweb\\Anarcareweb.csproj": {
+    "C:\\Users\\CharanTejaMutyala\\Downloads\\Anarcareweb_final\\Anarcareweb\\Anarcareweb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VamshiKrishnaJanagam\\OneDrive - DRJanki\\Desktop\\Anarcareweb\\Anarcareweb.csproj",
+        "projectUniqueName": "C:\\Users\\CharanTejaMutyala\\Downloads\\Anarcareweb_final\\Anarcareweb\\Anarcareweb.csproj",
         "projectName": "Anarcareweb",
-        "projectPath": "C:\\Users\\VamshiKrishnaJanagam\\OneDrive - DRJanki\\Desktop\\Anarcareweb\\Anarcareweb.csproj",
-        "packagesPath": "C:\\Users\\VamshiKrishnaJanagam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VamshiKrishnaJanagam\\OneDrive - DRJanki\\Desktop\\Anarcareweb\\obj\\",
+        "projectPath": "C:\\Users\\CharanTejaMutyala\\Downloads\\Anarcareweb_final\\Anarcareweb\\Anarcareweb.csproj",
+        "packagesPath": "C:\\Users\\CharanTejaMutyala\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CharanTejaMutyala\\Downloads\\Anarcareweb_final\\Anarcareweb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\VamshiKrishnaJanagam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\CharanTejaMutyala\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -44,7 +44,21 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.25.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.6, )"
             },
@@ -53,6 +67,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.6, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             }
           },
           "imports": [
@@ -74,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

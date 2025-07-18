@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AnarcareWeb.Models
@@ -7,16 +8,18 @@ namespace AnarcareWeb.Models
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Required, EmailAddress]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
 
         [Required]
-        [Range(1, 120)]
-        public int Age { get; set; }
+        public string Phone { get; set; } = string.Empty;
 
         [Required]
-        public string Motivation { get; set; }
+        public string Availability { get; set; } = string.Empty;
+
+        // Made nullable to prevent FormatException on bad DB data
+        public DateTime? SubmittedAt { get; set; } 
     }
 }

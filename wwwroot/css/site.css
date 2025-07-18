@@ -1,37 +1,531 @@
-/* Base Resets */
-* {
+:root {
+  --page-heading-size: 1.6rem;     /* Previously 2rem — now ~18pt */
+  --subheading-size: 1.4rem;       /* Previously 1.4rem — now ~16.5pt */
+  --body-text-size: 1.3rem;         /* Stays ~14.5pt */
+  --small-text-size: 0.95rem;
+  --nav-text-size: 1.18rem;
+  --button-text-size: 1.1rem;
+}
+
+
+/* ========================================
+   GLOBAL FONT SIZE STANDARDIZATION
+   ======================================== */
+
+.page-heading,
+.page-heading h1,
+.page-heading h2,
+.services-overview h1,
+.career-title,
+.volunteer-hero h1,
+.employment-title,
+.referrals-title,
+.about-text h2,
+h1, h2, h3, h4, h5, h6,
+.team-heading,
+.team-diagram-heading,
+.volunteer-form-section h2,
+.employment-form h2,
+.referral-form h2,
+.service-content h2,
+.service-content h3,
+.hospice-content h2,
+.hospice-content h3,
+.about-text h3,
+.about-mission-section .mission-text h3,
+.what-text h3 {
+  font-family: 'Ysabeau', sans-serif !important;
+}
+
+.page-heading,
+.page-heading h1,
+.page-heading h2,
+.services-overview h1,
+.career-title,
+.volunteer-hero h1,
+.employment-title,
+.referrals-title {
+  font-size: var(--page-heading-size) !important;
+  font-weight: 700 !important;
+  line-height: 1.0 !important;
+  text-align: center !important;
+  color: #2c2c2c !important;
+  margin-bottom: 20px !important;
+}
+
+/* Standardize all subheadings (h2, h3) */
+h2,
+h3,
+.service-content h2,
+.service-content h3,
+.hospice-content h2,
+.hospice-content h3,
+.about-text h3,
+.about-mission-section .mission-text h3,
+.what-text h3,
+.team-heading,
+.team-diagram-heading,
+.volunteer-form-section h2,
+.employment-form h2,
+.referral-form h2 {
+  font-size: var(--subheading-size) !important;
+  font-weight: 700 !important;
+  color: #2c2c2c !important;
+  margin-bottom: 15px !important;
+}
+
+/* Standardize all body text (p, ul, li, etc.) */
+p,
+ul,
+li,
+.about-text p,
+.about-mission-section .mission-text p,
+.what-text p,
+.team-container p.team-intro,
+.team-role p,
+.service-content p,
+.service-content ul,
+.hospice-content p,
+.hospice-content ul,
+.volunteer-hero p,
+.volunteer-form-section label,
+.volunteer-form-section input,
+.volunteer-form-section textarea,
+.employment-intro,
+.employment-form label,
+.employment-form input,
+.employment-form textarea,
+.referrals-subtitle,
+.referral-form label,
+.referral-form input,
+.referral-form textarea,
+.referral-form select,
+.image-caption,
+.mission-text p,
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-info address,
+.contact-info p,
+.map-note,
+.footer-links a,
+.copyright,
+.office-hours,
+.on-call-info p {
+  font-size: var(--body-text-size) !important;
+  line-height: 1.3 !important;
+  color: #333 !important;
+}
+section p,
+main p,
+article p,
+.content p,
+.page-content p,
+.hospice-content p,
+.about-section p,
+.referrals-content p,
+.volunteer-hero p,
+.employment-intro p,
+.contact-section p,
+.career-section p,
+/* .map-note-container p, */
+.services-overview p {
+  text-align: left;
+  text-justify: none;
+  line-height: 1.3;
+}
+
+/* Standardize small text */
+small,
+.copyright,
+.footer .copyright {
+  font-size: var(--small-text-size) !important;
+}
+
+/* Standardize button text */
+button,
+.submit-btn,
+.contact-form button,
+.volunteer-form-section button,
+.employment-form button {
+  font-size: var(--button-text-size) !important;
+}
+
+/* Standardize navigation text */
+nav ul a,
+.main-nav .dropdown-content a,
+.main-nav .dropdown-link,
+.main-nav .dropdown-toggle {
+  font-size: var(--nav-text-size) !important;
+}
+
+/* ========================================
+   SPECIFIC PAGE HEADING OVERRIDES
+   ======================================== */
+
+   .services-overview h1{
+    margin-top: 30px;
+   }
+/* About Us page */
+.about-text h2 {
+  font-size: var(--page-heading-size) !important;
+  font-weight: 700 !important;
+  color: #2c2c2c !important;
+  margin-bottom: 10px !important;
+}
+
+/* Hero section on home page */
+.hero-left h1 {
+  font-size: 3rem !important;
+  /* font-weight: 500 !important; */
+  margin: 0 !important;
+  color: #2c2c2c !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) !important;
+  letter-spacing: -1px !important;
+}
+
+
+
+/* .hero-left h1 .hero-line {
+  word-spacing: -0.4rem;
+} */
+
+
+/* Services section on home page */
+.services h2 {
+  font-size: var(--subheading-size) !important;
+  font-weight: 800 !important;
+  color: white !important;
+  text-shadow: 1px 1px #6c4444 !important;
+  margin-bottom: 20px !important;
+  margin-top: 10px !important;
+}
+
+/* Team role headings */
+.team-role h4 {
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  margin: 0 0 5px !important;
+  color: #2c2c2c !important;
+}
+
+/* ========================================
+   RESPONSIVE FONT SIZE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 1005px) {
+  .page-heading,
+  .page-heading h1,
+  .page-heading h2,
+  .services-overview h1,
+  .career-title,
+  .volunteer-hero h1,
+  .employment-title,
+  .referrals-title,
+  .about-text h2 {
+    font-size: 2.5rem !important;
+  }
+
+  h2,
+  h3,
+  .service-content h2,
+  .service-content h3,
+  .hospice-content h2,
+  .hospice-content h3,
+  .about-text h3,
+  .about-mission-section .mission-text h3,
+  .what-text h3,
+  .team-heading,
+  .team-diagram-heading,
+  .volunteer-form-section h2,
+  .employment-form h2,
+  .referral-form h2,
+  .services h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .hero-left h1 {
+    font-size: 2.8rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-heading,
+  .page-heading h1,
+  .page-heading h2,
+  .services-overview h1,
+  .career-title,
+  .volunteer-hero h1,
+  .employment-title,
+  .referrals-title,
+  .about-text h2 {
+    font-size: 2.2rem !important;
+  }
+
+  h2,
+  h3,
+  .service-content h2,
+  .service-content h3,
+  .hospice-content h2,
+  .hospice-content h3,
+  .about-text h3,
+  .about-mission-section .mission-text h3,
+  .what-text h3,
+  .team-heading,
+  .team-diagram-heading,
+  .volunteer-form-section h2,
+  .employment-form h2,
+  .referral-form h2,
+  .services h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-heading,
+  .page-heading h1,
+  .page-heading h2,
+  .services-overview h1,
+  .career-title,
+  .volunteer-hero h1,
+  .employment-title,
+  .referrals-title,
+  .about-text h2 {
+    font-size: 2rem !important;
+  }
+
+  h2,
+  h3,
+  .service-content h2,
+  .service-content h3,
+  .hospice-content h2,
+  .hospice-content h3,
+  .about-text h3,
+  .about-mission-section .mission-text h3,
+  .what-text h3,
+  .team-heading,
+  .team-diagram-heading,
+  .volunteer-form-section h2,
+  .employment-form h2,
+  .referral-form h2,
+  .services h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .hero-left h1 {
+    font-size: 1.9rem !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .page-heading,
+  .page-heading h1,
+  .page-heading h2,
+  .services-overview h1,
+  .career-title,
+  .volunteer-hero h1,
+  .employment-title,
+  .referrals-title,
+  .about-text h2 {
+    font-size: 1.8rem !important;
+  }
+
+  h2,
+  h3,
+  .service-content h2,
+  .service-content h3,
+  .hospice-content h2,
+  .hospice-content h3,
+  .about-text h3,
+  .about-mission-section .mission-text h3,
+  .what-text h3,
+  .team-heading,
+  .team-diagram-heading,
+  .volunteer-form-section h2,
+  .employment-form h2,
+  .referral-form h2,
+  .services h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .hero-left h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-/* Apply font families globally */
-body {
-  font-family: 'Ysabeau', sans-serif;
-}
-
-/* Headings use Arima Madurai */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arima Madurai', cursive;
-}
-h1{
-  font-weight: 800;
-}
-
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden !important;
   margin: 0;
   padding: 0;
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
-  box-sizing: border-box;
+  font-family: 'Ysabeau', sans-serif;
+  background-color: #fff9f9;
+  color: #222;
+  line-height: 1.3;
+  font-size: var(--body-text-size);
 }
-
 
 body {
-  line-height: 1.6;
-  background-color: #fff9f9;
+  min-height: 100vh;
+  padding-bottom: 0;
 }
 
-/* Elements with animations */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-wrapper main {
+  flex: 1 0 auto;
+}
+
+.translate-container {
+  pointer-events: none !important;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  z-index: 9999;
+}
+.translate-container * {
+  pointer-events: auto !important; /* re-enable for children like the button */
+}
+
+body.volunteer-page .translate-container {
+  position: relative;
+  top: 90px; 
+  z-index: 9999;
+}
+body.services-page .translate-container {
+  position: relative;
+  top: 10px; 
+  z-index: 9999;
+} 
+body.careers-page .translate-container {
+  position: relative;
+  top: 87px;  
+  z-index: 9999;
+} 
+
+#toggleTranslatePopup {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: var(--body-text-size);
+  cursor: pointer;
+}
+
+.custom-language-popup {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.custom-language-popup .lang-btn {
+  display: block;
+  padding: 6px 12px;
+  font-size: var(--small-text-size);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 351px) {
+  .translate-container {
+    top: 56px !important; /* adjust as needed */
+    left: 3px ;
+    z-index: 9999 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
+
+.accessibility-tab {
+  position: absolute !important;
+  top: 180px !important;   /* Adjust this if needed */
+  left: 0 !important;
+  z-index: 99999 !important;
+  transform: rotate(180deg) !important;
+  writing-mode: vertical-rl !important;
+  background: transparent !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+  border-right: none !important;
+  border-radius: 0 8px 8px 0 !important;
+  padding: 10px 6px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.15) !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+.accessibility-tab:hover {
+    background-color: #e2e2e2;
+}
+body.accessibility-view {
+    background-color: #fff !important;
+    color: #111 !important;
+    font-family: Arial, sans-serif !important;
+    /* line-height: 1.6; */
+    letter-spacing: 0.3px;
+}
+
+body.accessibility-view a {
+    color: #0033cc !important;
+    text-decoration: underline !important;
+    font-weight: bold;
+}
+
+body.accessibility-view img,
+body.accessibility-view video,
+body.accessibility-view iframe {
+    opacity: 0.1 !important;
+    pointer-events: none !important;
+}
+
+body.accessibility-view * {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body.accessibility-view nav,
+body.accessibility-view footer,
+body.accessibility-view header {
+    background-color: #f5f5f5 !important;
+    color: black !important;
+}
+
+body.accessibility-view h1,
+body.accessibility-view h2,
+body.accessibility-view h3 {
+    font-weight: bold !important;
+    color: #000 !important;
+}
 .service-card,
 .hero-right img,
 .info-icon,
@@ -40,8 +534,6 @@ body {
 .highlight-phone {
   will-change: transform, opacity;
 }
-
-/* Keyframes */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -78,13 +570,11 @@ body {
   height: auto;
   display: block;
 }
-
-/* Phone Icon Animation */
 .bi.bi-telephone-fill,
 .call-icon{
   animation: ring 3s infinite ease-in-out, glowCall 3s infinite ease-in-out;
   display: inline-block;
-  font-size: 1.48rem;
+  font-size: var(--body-text-size);
   color: white;
   margin-top: 3px;
   transition: transform 0.3s ease;
@@ -93,8 +583,6 @@ body {
 .call-icon:hover {
   transform: scale(1.2) rotate(-10deg);
 }
-
-/* Header/Navbar */
 .top-header {
   position: fixed;
   top: 0;
@@ -107,7 +595,6 @@ body {
   padding: 10px 20px;
   z-index: 999;
   border-bottom: 1px solid #ddd;
-  /* font-family: 'Ysabeau'; */
   font-weight: 600;
 } 
 #phoneBanner{
@@ -123,7 +610,6 @@ body {
 .main-nav .dropdown-content a,
 .main-nav .dropdown-link,
 .main-nav .dropdown-toggle {
-  /* font-family: 'Ysabeau'; */
   font-weight: 600;
 }
 
@@ -142,77 +628,104 @@ nav ul {
   gap: 30px;
   margin: 0;
   padding: 0;
-  /* font-family: 'Ysabeau'; */
 }
 
 nav ul li {
   position: relative;
-  /* font-family: 'Ysabeau'; */
 }
 
+/* Navigation link styling */
 nav ul a {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
   color: #333;
   padding: 5px 10px;
-  position: relative;
   transition: all 0.3s ease;
-  font-size: 1.18rem;
-  /* font-family: 'Ysabeau'; */
+  font-size: var(--nav-text-size);
 }
 
 nav ul a::after {
   content: "";
-  display: block;
-  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   height: 2px;
   background: maroon;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: width 0.3s;
-  /* font-family: 'Ysabeau'; */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav ul a:hover::after {
+  transform: scaleX(1);
 }
 
 nav ul a:hover {
   color: maroon;
-  /* font-family: 'Ysabeau'; */
 }
-
-nav ul a:hover::after {
-  width: 100%;
-  /* font-family: 'Ysabeau'; */
-}
-
-/* Dropdown Menu */
 
 .dropdown {
   position: relative;
 }
 
-/* Dropdown Menu */
+/* Wrapper to align dropdown text + arrow */
+.dropdown-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Unstyled toggle button holding the arrow */
+.dropdown-toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent !important;
+  border: none !important;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Arrow icon style */
+.arrow-icon {
+  font-size: 0.7rem;
+  /* margin-left: 4px; */
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Optional rotation on open */
+.dropdown.open .arrow-icon {
+  transform: rotate(180deg);
+  color: maroon;
+}
+
+
+/* Ensure dropdown content is hidden by default */
 .dropdown-content {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: white;
   min-width: 180px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
   padding: 10px 0;
-  z-index: 1100;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-  display: block;
-  margin: 0;
+  border-radius: 4px;
 }
 
-/* Show on hover */
-.dropdown:hover .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.dropdown .dropdown-content {
+  display: none;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
 }
 
 .container,
@@ -223,14 +736,9 @@ nav ul a:hover::after {
   margin-right: 0 !important;
   width: 100% !important;
 }
-
-/* Force vertical layout */
 .dropdown-content li {
-  display: block;       
-  white-space: nowrap;
+  list-style: none;
 }
-
-/* Link style inside dropdown */
 .dropdown-content a {
   display: block;       
   padding: 10px 20px;
@@ -239,19 +747,17 @@ nav ul a:hover::after {
   font-weight: normal;
   transition: background 0.2s, color 0.2s;
 }
-
-/* Hover effect */
 .dropdown-content a:hover {
   background-color: #f8dcdc;
   color: maroon;
 }
 
-/* Hide toggle by default (desktop) */
-.dropdown-toggle {
-  display: none;
+.mobile-arrow {
+  display: none !important;
 }
-
-/* Mobile Styles */
+.dropdown-link::after {
+  display: inline-block;
+}
 
 @media (max-width: 1005px) {
   .main-nav ul {
@@ -270,29 +776,28 @@ nav ul a:hover::after {
   }
 
   .main-nav .dropdown-link {
-    flex-grow: 1;
-    text-decoration: none;
-    color: #222;
-    font-size: 1.18rem;
-    font-weight: 600;
-    /* font-family: 'Ysabeau'; */
-    align-items:center ;
-  }
+  flex-grow: 1;
+  text-decoration: none;
+  color: #222;
+  font-size: var(--nav-text-size);
+  font-weight: 600;
+  align-items:center ;
+}
 
   .dropdown-toggle {
-    display: inline-block;
-    background: none;
-    border: none;
-    font-size: 1.08rem;
-    cursor: pointer;
-    padding: 0;
-    margin-left: 10px;
-    color: #444;
-    transition: transform 0.3s ease;
-  }
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: var(--body-text-size);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+  color: #444;
+  transition: transform 0.3s ease;
+}
 
-  .dropdown.open .dropdown-toggle {
-    transform: rotate(180deg); 
+  .mobile-arrow {
+    display: inline-block !important;
   }
 
   .main-nav .dropdown-content {
@@ -318,16 +823,14 @@ nav ul a:hover::after {
   }
 
   .main-nav .dropdown-content li a {
-    text-decoration: none;
-    font-size: 1.08rem;
-    color: #222;
-    padding: 16px 20px;
-    display: block;
-    width: 100%;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-
-  /* Reset desktop styles */
+  text-decoration: none;
+  font-size: var(--body-text-size);
+  color: #222;
+  padding: 16px 20px;
+  display: block;
+  width: 100%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
   .main-nav .dropdown-content {
     position: static !important;
     visibility: visible !important;
@@ -339,7 +842,6 @@ nav ul a:hover::after {
   }
 }
 
-/* Phone Banner Styling */
 .center-phone {
   position: fixed;
   top: 86px; 
@@ -352,11 +854,10 @@ nav ul a:hover::after {
   width: max-content;
 }
 
-
 .center-phone .phone,
 .highlight-phone{
   font-weight: bold;
-  font-size: 1.18rem;
+  font-size: var(--nav-text-size);
   padding: 12px 28px;
   border: none;
   border-radius: 35px;
@@ -374,7 +875,7 @@ nav ul a:hover::after {
 
 .center-phone .phone i, 
 .highlight-phone i{
-  font-size: 1.28rem;
+  font-size: var(--body-text-size);
   color: white;
 }
 
@@ -383,8 +884,6 @@ nav ul a:hover::after {
   transform: scale(1.08);
   cursor: pointer;
 }
-
-/* Contact Highlight Section */
 .contact-highlight-box {
   background: linear-gradient(to right, #fbe9e7, #ffebee);
   border: 1px solid #f8bbd0;
@@ -396,7 +895,7 @@ nav ul a:hover::after {
 }
 
 .emergency-heading {
-  font-size: 1.48rem;
+  font-size: var(--body-text-size);
   font-weight: 700;
   color: maroon;
   margin-bottom: 10px;
@@ -404,11 +903,10 @@ nav ul a:hover::after {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  /* font-family: 'Ysabeau'; */
 }
+
 .highlight-text{
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.48rem;
+  font-size: var(--body-text-size);
   font-weight: 700;
   color: maroon;
   margin-bottom: 10px;
@@ -417,7 +915,7 @@ nav ul a:hover::after {
   justify-content: center;
   gap: 10px;
 }
-/* Hero Section */
+
 .hero,
 main,
 .center-phone {
@@ -426,16 +924,15 @@ main,
   overflow: visible !important;
 }
 
-
 .hero {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background: #fff0f0;
-  padding: 60px 140px;
+  padding: 20px 140px;
   position: relative;
-  margin-top: 90px;
+  margin-top:30px;
 }
 
 .hero-left {
@@ -447,40 +944,31 @@ main,
 
 }
 
-.hero-left h1 {
-  font-size: 4.58rem;
-  font-weight: 900;
-  line-height: 1.1;
-  margin: 0;
-  color: #2c2c2c;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-  letter-spacing: -1px;
-  /* font-family: 'Arima Madurai'; */
-}
-
+/* Hero heading is handled by global standardization rules above */
 .hero-line {
   display: block;
   margin-bottom: 8px;
+  font-weight: 750;
 }
 
-.hero-left h1 .highlight {
+.hero-left h1 .highlight{
   color: #2c2c2c;
-  font-weight: 900;
+  font-weight: 750;
 }
 
 .hero-left h1 .highlight-red {
   color: #c0392b;
-  font-weight: 900;
+  font-weight: 750;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .hero-left p {
-  font-size: 1.28rem;
+  font-size: var(--body-text-size);
   color: #333;
-  line-height: 1.8;
+  /* line-height: 1.3; */
   margin-top: 30px;
-  max-width: 80%;
-  /* font-family: 'Ysabeau'; */
+  max-width: 85%;
+  padding: 0 auto;
 }
 
 .hero-right {
@@ -495,37 +983,36 @@ main,
 
 .hero-right img {
   max-width: 100%;
+  max-width: 750px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-left: 0px;
   z-index: 1;
 }
-/* Services Section */
 .services {
   background: #ddbaba;
   padding: 20px 20px 80px;
   text-align: center;
 }
 
-.services h2 {
-  font-size: 2.48rem;
-  font-weight: 800;
-  color: white;
-  text-shadow: 1px 1px #6c4444;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  /* font-family: 'Ysabeau'; */
+@media (max-width: 350px) {
+  .services-overview h1 {
+    padding-top: 50px !important;
+    text-align: center;
+    word-break: break-word;
+  }
 }
 
+/* Services heading is handled by global standardization rules above */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  padding: 0 40px;
+  padding: 0 20px;
   max-width: 1200px;
-
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 @media (max-width: 992px) {
@@ -541,6 +1028,7 @@ main,
 }
 
 .service-card {
+  width: 100%;
   background: white;
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -549,9 +1037,7 @@ main,
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  /* font-family: 'Ysabeau'; */
-  
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  
 }
 
 .service-card:hover {
@@ -572,19 +1058,18 @@ main,
 }
 
 .service-card p {
-  font-size: 1.28rem;
+  font-size: var(--body-text-size);
   font-weight: 600;
   text-align: center;
   padding: 20px 15px;
   margin: 0;
   transition: color 0.2s ease;
-   /* font-family: 'Ysabeau'; */
 }
 
 .service-card:hover p {
   color: maroon;
 }
-/* Info Boxes Wrapper */
+
 .info-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -592,11 +1077,9 @@ main,
   padding: 40px 20px;
   justify-content: center;
   background-color: #ddbaba;
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.18rem;
+  font-size: var(--nav-text-size);
 }
 
-/* Each Box */
 .clickable-box {
   text-decoration: none;
   color: inherit;
@@ -604,23 +1087,21 @@ main,
   padding: 30px 20px;
   border-radius: 15px;
   width: 100%;
-  max-width: 380px;
+  max-width: 500px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: left;
-  font-size: 1.18rem;
+  font-size: var(--nav-text-size);
 }
 
-/* Hover Effect */
 .clickable-box:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Icon inside each box */
 .clickable-box .info-icon {
   max-width: 120px;
   height: auto;
@@ -632,17 +1113,23 @@ main,
   transform: scale(1.1);
 }
 
-/* List */
 .clickable-box ul {
   padding-left: 20px;
   list-style: disc;
   margin-bottom: 20px;
   color: #333;
-  font-size: 1.08rem;
-  line-height: 1.6;
+  font-size: 1.1rem !important;
+  white-space: normal;           /* allow wrapping only when needed */
+  word-break: keep-all; 
 }
 
-/* Button at the bottom */
+.clickable-box ul li {
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  text-wrap: wrap !important;
+}
+
 .clickable-box .info-button {
   margin-top: auto;
   font-weight: bold;
@@ -699,14 +1186,15 @@ main,
     align-items: center;
     padding: 0 20px;
     text-align: center;
+    align-items: center;
   }
 
   .mission-text {
-    padding-top: 20px;
-    font-size: 1.08rem;
-    line-height: 1.7;
-    color: #333;
-  }
+  padding-top: 20px;
+  font-size: var(--body-text-size);
+  /* line-height: 1.3; */
+  color: #333;
+}
 
   @keyframes fadeInLogo {
     from {
@@ -734,8 +1222,6 @@ main,
   }
 }
 
-
-/* Mission Section */
 .mission-section {
   background-color: #fcecec;
   text-align: center;
@@ -757,15 +1243,11 @@ main,
 .mission-text p {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 1.38rem;
-  line-height: 1.8;
+  font-size: var(--body-text-size)!important;
   color: #333;
-  font-weight: 500;
-  /* font-family: 'Ysabeau'; */
+  text-align: center;
 }
 
-
-/* Contact Section */
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -775,37 +1257,32 @@ main,
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.2rem;
+  font-size: var(--body-text-size);
 }
 
 .contact-form,
 .contact-info {
-  /* font-family: 'Ysabeau'; */
   flex: 1 1 360px;
   background: #fff;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
-
 .contact-form form {
-  /* font-family: 'Ysabeau'; */
   display: flex;
   flex-direction: column;
 }
 
 .contact-form label {
-  /* font-family: 'Ysabeau'; */
   font-weight: 600;
   margin: 10px 0 5px;
+  font-size: var(--body-text-size);
 }
 
 .contact-form input,
 .contact-form textarea {
-  /* font-family: 'Ysabeau'; */
   padding: 10px 12px;
-  font-size: 1.08rem;
+  font-size: var(--body-text-size);
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -820,7 +1297,7 @@ main,
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
-  /* font-family: 'Ysabeau'; */
+  font-size: var(--button-text-size);
 }
 
 .contact-form button:hover {
@@ -839,12 +1316,11 @@ main,
   border-radius: 12px;
   padding: 15px 20px;
   background-color: #fff;
-  font-size: 1.28rem;
+  font-size: var(--body-text-size);
   font-weight: 600;
   color: #2c2c2c;
   text-align: center;
   margin-bottom: 20px;
-  /* font-family: 'Ysabeau'; */
 }
 
 .address-call-info {
@@ -853,8 +1329,7 @@ main,
   gap: 20px;
   align-items: flex-start;
   margin-top: 10px;
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.28rem;
+  font-size: var(--body-text-size);
 }
 
 .on-call-info {
@@ -865,21 +1340,18 @@ main,
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.28rem;
+  font-size: var(--body-text-size);
 }
 
 .on-call-info p {
   margin: 0;
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.28rem;
+  font-size: var(--body-text-size);
 }
 
 .contact-info address {
   margin: 15px 0;
-  line-height: 1.6;
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.5rem;
+  /* line-height: 1.3; */
+  font-size: var(--body-text-size);
 }
 
 .map-address a {
@@ -896,7 +1368,7 @@ main,
 .map {
   margin: 0;
   padding: 0;
-  line-height: 1;
+  /* line-height: 1.3; */
   background-color: #fcecec;
 }
 
@@ -915,31 +1387,46 @@ main,
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
-  font-size: 1.2rem;
+  font-size: var(--body-text-size);
+}
+
+.map-note-container {
+  background-color: #fcecec;
+  border-top: 1px solid #e4bdbd;
+  border-radius: 0 0 15px 15px;
+  padding: 30px 20px 20px;
+  text-align: center;
 }
 
 .map-note {
   margin: 0;
-  padding: 30px 20px 20px;
-  text-align: center;
-  font-weight: bold;
-  background-color: #fcecec;
   color: #333;
-  line-height: 1.8;
-  border-top: 1px solid #e4bdbd; 
-  border-radius: 0 0 15px 15px;
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.2rem;
+  font-size: var(--body-text-size);
+  line-height: 1.5;
 }
+
+.map-note.main-text {
+  font-weight: normal;
+  text-align: center;
+}
+
+.map-note.serving-text {
+  font-weight: 650;
+  margin-top: 20px;  /* ⬅️ adds the line gap */
+  text-align: center; /* ⬅️ ensure it's centered */
+}
+
+
 
 /* Footer */
 .clean-footer {
   background: #e7d9d9;
   text-align: center;
   padding: 30px 20px;
-  /* font-family: 'Ysabeau'; */
-  font-size: 1.2rem;
+  font-size: var(--body-text-size);
+  margin-top: auto;
 }
+
 
 .footer-bottom-row {
   display: flex;
@@ -948,14 +1435,14 @@ main,
   gap: 25px;
   flex-wrap: wrap;
   margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: var(--body-text-size);
 }
 
 .footer-links a {
   color: maroon;
   font-weight: 600;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: var(--body-text-size);
   transition: all 0.3s ease;
 }
 
@@ -966,7 +1453,7 @@ main,
 }
 
 .social-icons a {
-  font-size: 1.6rem;
+  font-size: var(--subheading-size);
   color: maroon;
   margin: 0 8px;
   display: inline-block;
@@ -979,10 +1466,9 @@ main,
 }
 
 footer .copyright {
-  font-size: 0.85rem;
+  font-size: var(--small-text-size);
   color: #666;
   margin-top: 5px;
-  /* font-family: 'Ysabeau'; */
 }
 
 /* Responsive */
@@ -1009,7 +1495,6 @@ footer .copyright {
   .about-text,
   .about-image {
     max-width: 100% !important;
-    overflow-x: hidden !important;
   }
 }
 
@@ -1069,19 +1554,19 @@ footer .copyright {
 }
 
 
-@media (max-width: 1005px) {
+@media (max-width: 1399px) {
   .mobile-toggle {
-    display: block;
-    font-size: 2rem;
-    color: maroon;
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 07px;
-    z-index: 1001;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  display: block;
+  font-size: var(--subheading-size);
+  color: maroon;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 07px;
+  z-index: 1001;
+  top: 50%;
+  transform: translateY(-50%);
+}
   .top-header {
     position: fixed;
     z-index: 10000;
@@ -1101,6 +1586,42 @@ footer .copyright {
     overflow-y: auto;
 
   }
+  nav.main-nav .dropdown-content {
+  position: static !important;
+  display: none;
+  width: 100%;
+  background: #fff; /* Or match your nav background */
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.main-nav .dropdown.open .dropdown-content {
+  display: block;
+}
+
+nav.main-nav .dropdown-content li {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+nav.main-nav .dropdown-content li a {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  background: none;
+  font-size: var(--body-text-size);
+  transition: background 0.2s;
+}
+
+nav.main-nav .dropdown-content li a:hover {
+  background: #f9eaea; /* optional hover effect */
+}
+
 
   nav.main-nav.show {
     transform: translateX(0);
@@ -1120,7 +1641,7 @@ footer .copyright {
 nav.main-nav ul li a {
   display: block;
   padding: 15px 20px;
-  font-size: 1.1rem;
+  font-size: var(--body-text-size);
   color: #333;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -1138,43 +1659,46 @@ body.menu-open{
   body.menu-open .center-phone {
     display: none !important;
   }
-  .hero{
-    margin-top: 102px ;
-  }
 }
 @media (max-width: 1040px) {
   .hero {
     flex-direction: column;
     align-items: center;
-    padding: 25px 15px; 
     text-align: center;
-    gap: 20px; 
-    top: -10px;
+    justify-content: center;
+    padding: 60px 20px;
+    margin-top: 30px;
   }
 
   .hero-left {
     width: 100%;
-    padding: 0 10px;
+    max-width: 100%;
+    padding: 0;
     box-sizing: border-box;
+    text-align: center;
   }
 
   .hero-left h1 {
-    font-size: 1.9rem;      
-    line-height: 1.2;
-    margin-bottom: 10px;      
+    font-size: 3rem;      
+    margin-bottom: 10px;
+    text-align: center;
   }
 
-  .hero-left p {
-    font-size: 0.95rem;       
-    line-height: 1.5;
-    margin: 0 auto 10px auto;  
+  .hero-left p {     
+    /* line-height: 1.3; */
+    margin: 0 auto;
+    padding: 0;
     max-width: 85%;
+    text-align: center;
   }
 
   .hero-right {
     margin-top: 10px;          
     width: 100%;
+    max-width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-right img {
@@ -1189,25 +1713,14 @@ body.menu-open{
 
 
 @media (min-width: 380px) and (max-width: 1040px) {
-  .hero-left h1 {
-    font-size: 2.8rem;   
-    line-height: 1.2;
-    font-weight: 800;    
-    margin-bottom: 18px;
-    letter-spacing: -0.5px;
-  }
-
-  .hero-left .highlight,
-  .hero-left .highlight-red {
-    font-weight: 900;     
-    color: #b22222;        
-  }
   .hero {
     flex-direction: column;
     align-items: center;
-    padding: 30px 5vw; 
     text-align: center;
+    justify-content: center;
     gap: 25px;
+    padding: 20px 20px;
+    margin-top: 30px;
   }
 
   .hero-left {
@@ -1215,19 +1728,21 @@ body.menu-open{
     max-width: 900px;  
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
   }
 
   .hero-left h1 {
     font-size: 2.2rem;
-    line-height: 1.25;
+
     margin-bottom: 12px;
+    text-align: center;
   }
 
   .hero-left p {
-    font-size: 1.05rem;
-    line-height: 1.7;
+    /* line-height: 1.3; */
     max-width: 100%; 
     margin: 0 auto;
+    text-align: center;
   }
 
   .hero-right {
@@ -1235,6 +1750,8 @@ body.menu-open{
     width: 100%;
     max-width: 900px;  
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-right img {
@@ -1243,6 +1760,63 @@ body.menu-open{
     height: auto;
     border-radius: 14px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Specific fix for 375px-667px range */
+@media (min-width: 375px) and (max-width: 667px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 15px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-left {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+    /* line-height: 1.3; */
+    margin-bottom: 15px;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .hero-left p {
+    /* line-height: 1.3; */
+    margin: 0 auto;
+    padding: 0;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero-right {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-right img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 }
 @media (max-width: 350px) {
@@ -1258,8 +1832,8 @@ body.menu-open{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px 10px;
-    margin-top: 150px;
+    padding: 10px 10px;
+    margin-top: 80px;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -1273,14 +1847,13 @@ body.menu-open{
 
   .hero-left h1 {
     font-size: 1.5rem;
-    line-height: 1.3;
+    /* line-height: 1.3; */
     margin-bottom: 10px;
     word-break: break-word;
   }
 
   .hero-left p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    /* line-height: 1.3; */
     margin-top: 12px;
     word-break: break-word;
     overflow-wrap: break-word;
@@ -1340,98 +1913,107 @@ body.menu-open{
 }
 
 
-@media (min-width: 1004px) and (max-width: 1040px) {
-  .hero {
-    margin-top: 105px;
-  }
-}
-
 
 /* === About Us page=== */
+.page-heading {
+  text-align: center;
+}
+
+.page-heading h2 {
+  font-size: var(--page-heading-size);
+  font-weight: 700;
+  color: #2c2c2c;
+  margin: 0 auto;
+  /* padding: 35px 0 0 0; */
+}
+
 .about-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;             /* Ensure side-by-side layout */
+  flex-wrap: nowrap;              /* Prevent wrapping unless screen is small */
   justify-content: space-between;
   align-items: center;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 150px 20px;
+  padding: 20px 20px;
   animation: fadeInUp 1s ease forwards;
 }
 
 .about-text {
-  flex: 1 1 55%;
-}
-
-.about-text h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #2c2c2c;
-  margin-bottom: 10px;
-   /* font-family: 'Arima Madurai'; */
-}
-
-.about-text h3 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: maroon;
-  margin-bottom: 15px;
-  /* font-family: 'Ysabeau'; */
+  flex: 1 1 50%;
+  max-width: 50%;
 }
 
 .about-text p {
-  font-size: 1.18rem;
-  color: #333;
-  line-height: 1.8;
-   /* font-family: 'Ysabeau'; */
+  font-size: var(--body-text-size) !important;
+  color: #333 !important;
+  text-align: left !important;
+  text-justify: none !important;
+  max-width: 100% !important;
+  margin: 30px 0 0 0 !important;
+  padding: 0 !important;
 }
 
 .about-image {
-  flex: 1 1 40%;
+  flex: 1 1 50%;
+  max-width: 50%;
   animation: zoomIn 0.8s ease forwards;
   opacity: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .about-image img {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;       /* Slightly larger image */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   display: block;
 }
+
 @media (max-width: 1068px) {
   .about-section {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     text-align: center;
-    padding: 100px 20px 60px;
+    padding: 20px;
+    gap: 30px;
   }
 
-  .about-text {
-    text-align: center;
-    padding: 0 15px;
-  }
-
+  .about-text,
   .about-image {
-    text-align: center;
     width: 100%;
+    max-width: 90%;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
   }
 
   .about-image img {
-    max-width: 80%;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     display: block;
+    margin: 0 auto;
   }
+
 }
+
+
 @media (min-width: 1068px) and (max-width: 1250px) {
   .about-section {
     padding-left: 60px;
     padding-right: 60px;
-  }
-
-  .about-text {
-    padding-right: 20px;
   }
 
   .about-image img {
@@ -1442,22 +2024,17 @@ body.menu-open{
 
 
 /* === Our Mission Section === */
-@media (min-width: 350px) and (max-width: 1005px) {
-  .about-section {
-    padding-top: 80px !important; 
-  }
 
   .about-text h2 {
-    font-size: 3rem !important;
-    margin-top: 20px;
-  }
- 
+  font-size: var(--page-heading-size) !important;
+  margin-top: 20px;
 }
+ 
 
 .about-mission-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
@@ -1482,38 +2059,40 @@ body.menu-open{
 
 .about-mission-section .mission-text {
   flex: 1 1 60%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left;
 }
 
-.about-mission-section .mission-text h3 {
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: maroon;
-  margin-bottom: 10px;
-}
-
+.about-mission-section .mission-text h3,
 .about-mission-section .mission-text p {
-  font-size: 1.2rem;
-  color: #444;
-  line-height: 1.8;
-  max-width: 550px;
-  margin: 0 auto;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+.about-mission-section .mission-text h3{
+  margin-bottom: 15px !important;
 }
 
 
-/* === What We Do Section === */
+
+
+/* === What We Do Section (Matches Our Mission) === */
 .what-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
+  align-items: start;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   padding: 40px;
-  margin: 60px auto 360px auto;
+  margin: 20px auto 360px auto;
   max-width: 1100px;
-  /* font-family: 'Ysabeau'; */
+  gap: 40px;
 }
 
 .what-image {
@@ -1523,30 +2102,40 @@ body.menu-open{
 .what-image img {
   width: 100%;
   max-width: 380px;
-  border-radius: 15px;
-  object-fit: cover;
+  border-radius: 12px;
   display: block;
   margin: 0 auto;
 }
 
 .what-text {
   flex: 1 1 60%;
-  text-align: center;
+  text-align: start !important;
 }
-
-.what-text h3 {
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: maroon;
-  margin-bottom: 10px;
-}
-
 .what-text p {
-  font-size: 1.2rem;
-  color: #444;
-  line-height: 1.8;
-  max-width: 550px;
-  margin: 0 auto;
+  margin: 0 auto !important;
+  text-align: start !important;
+  max-width: 100% !important;
+}
+
+.what-section,
+.about-mission-section {
+  display: flex;
+  align-items: flex-start;  /* Stretch children to equal height */
+}
+
+.what-image,
+.mission-image {
+  display: flex;
+  align-items: stretch;   /* Fill full height of parent */
+}
+
+.what-image img,
+.mission-image img {
+  height: 100%;           /* Fills vertical height */
+  width: 100%;            /* Fills horizontal width */
+  object-fit: cover;      /* Maintains aspect ratio, may crop */
+  border-radius: 12px;
+  display: block;
 }
 
 
@@ -1555,11 +2144,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.team-intro {
+  margin-bottom: 30px;
+  text-align: center !important;
+}
+
 /* === Diagram Section === */
 .team-diagram-container {
   position: relative;
   max-width: 500px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto;
 }
 
 .team-chart-img {
@@ -1578,15 +2172,7 @@ html {
 }
 
 /* === Section Title === */
-.team-diagram-heading,
-.team-heading {
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: maroon;
-  /* font-family: 'Ysabeau'; */
-}
+/* Team heading is handled by global standardization rules above */
 
 /* === Section Wrappers === */
 .team-wrapper {
@@ -1609,24 +2195,6 @@ html {
   align-items: center;
 }
 
-.team-container h2 {
-  font-size: 2.05rem;
-  font-weight: bold;
-  color: maroon;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.team-container p.team-intro {
-  text-align: center;
-  font-size: 1.08rem;
-  color: #444;
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  /* font-family: 'Ysabeau'; */
-}
-
 /* === Team Roles Cards === */
 .team-role {
   display: flex;
@@ -1641,22 +2209,6 @@ html {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   max-width: 800px;
-}
-.team-role h4 {
-  /* font-family: 'Ysabeau'; */
-  font-weight: 700;          /* Bold */
-  font-size: 1.15rem;
-  margin: 0 0 5px;
-  color: #2c2c2c;
-}
-
-.team-role p {
-  /* font-family: 'Ysabeau'; */
-  font-weight: 400;          /* Normal */
-  font-size: 1.05rem;
-  color: #333;
-  line-height: 1.7;
-  margin: 0;
 }
 
 .team-role:hover {
@@ -1681,240 +2233,236 @@ html {
   flex: 1;
 }
 
-.team-role .role-text strong {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #2c2c2c;
+
+/* === Services Page === */
+/* Wrapper section with pink background extending to footer */
+.services-wrapper {
+    background-color: #ddbaba;
+    padding-bottom: 60px;
 }
 
-.team-role .role-text p {
-  font-size: 1.08rem;
-  color: #333;
-  line-height: 1.7;
-  margin: 5px 0 0;
+/* Content inside the wrapper */
+.services-overview {
+    padding: 50px 0 0;
+    margin: 0;
+    background-color: transparent;
 }
 
-/* === Mobile Adjustments === */
-@media (max-width: 600px) {
-  .team-role {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .team-role img {
-    margin-bottom: 10px;
-  }
-
-  .team-role .role-text {
-    text-align: center;
-  }
-}
-
-@media (max-width: 350px){
-  .about-section{
-    padding-top: 140px;
-  }
-}
-
-
-/* Services Page */
-.services {
-  overflow-x: hidden;
-}
-
+/* Heading styling */
 .services-overview h1 {
-  background-color: #ddbaba;
-  color: white;
-  font-size: clamp(2rem,9vw,4rem);
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  line-height: 1.2;
-  text-align: center;
-  margin: 0;
-  padding: 190px 0 0 0;
-  display: block;
-  /* font-family: 'Arima Madurai'; */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
 }
 
-.page-heading{
-  font-size: 2.9rem;
-  font-weight: 700;
-  color: #2c2c2c;
-  line-height: 1.2;
-  text-align: center;
-  margin: 0 0 20px;
-}
-@media (min-width: 350px) {
-  body.services-page #phoneBanner {
-    display: block !important;
-    position: absolute !important;
-    top: 86px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 9999 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
+/* Flex layout for the service cards */
+.info-boxes.services-page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
 }
 
 
-
-
-
-/* === Hospice Care Section === */
-.page-heading {
-  margin: 20px;
-  padding: 80px 0 0 0;
-  font-size: 2.3rem;
-  line-height: 1.2;
-  font-weight: 700;
-  text-align: center;
-  color: #2c2c2c;
-  /* font-family: 'Arima Madurai'; */
-}
-
+/* === HOSPICE CARE PAGE STYLING === */
+/* Main container */
 .hospice-container {
   background-color: #fff9f9;
-  padding: 10px 25px 25px;
+  padding: 0px 25px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Section wrapper */
 .hospice-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
   max-width: 1100px;
-  align-items: center;
-  background: #fff;
+  width: 100%;
+  background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  padding: 30px 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start !important; /* ✅ Align text & image to top */
+  gap: 40px;
 }
 
+/* Alternate backgrounds */
+.hospice-box.bg-alt {
+  background-color: #fdf1f1;
+}
+.hospice-box.bg-tan {
+  background-color: #f5f5f5;
+}
+
+/* Text content */
+.hospice-text {
+  flex: 1 1 55%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ✅ Align to top */
+}
+
+.hospice-text h2,
+.hospice-text h3,
+.hospice-text h4 {
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 15px;
+}
+
+.hospice-text p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.hospice-text ul {
+  padding-left: 20px;
+  color: #333;
+  font-size: 1.05rem;
+  list-style-type: disc;
+}
+
+.hospice-text ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Image content */
 .hospice-img {
-  flex: 1 1 45%;
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start !important; /* ✅ Align image top */
 }
 
 .hospice-img img {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  height: auto;
   display: block;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
-.hospice-content {
-  flex: 1 1 50%;
-  text-align: left;
-  /* font-family: 'Ysabeau'; */
+/* Page heading */
+.page-heading {
+  text-align: center;
+  margin-top: 40px;
 }
-
-.hospice-content h2 {
-  font-size: 1.58rem;
-  color: #2c2c2c;
-  margin-bottom: 15px;
+.page-heading h2 {
+  font-size: 3rem;
   font-weight: 700;
+  margin: 0 auto;
+  color: #2c2c2c;
 }
 
-.hospice-content ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  line-height: 1.8;
-  color: #333;
-  font-size: 1.08rem;
-}
-@media (max-width: 768px) {
-  .page-heading {
-    font-size: 2rem;
-    padding-top: 100px;
-    margin-bottom: 10px;
-    color: #2c2c2c;
-    text-align: center;
-  }
-  .hospice-container,
-  .hospice-box,
-  .hospice-content {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    overflow: visible !important;
-    min-height: 1px;
-    position: relative;
-    z-index: 1;
-  }
-}
-@media (min-width: 768px) and (max-width: 1005px) {
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1005px) {
   .hospice-box {
-    display: block !important;
-    /* flex-direction: column !important; */
-    align-items: center !important;
-    gap: 30px;
-    padding: 25px 15px;
+    flex-direction: column;
+    padding: 20px 15px;
+    text-align: center;
+    align-items: center;
   }
 
-  .hospice-img,
-  .hospice-content {
-    width: 100%;
-    max-width: 90%;
+  .hospice-text,
+  .hospice-img {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
-  .hospice-content {
+  .hospice-text {
+    text-align: center;
+  }
+
+  .hospice-text ul {
     text-align: left;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    padding-left: 20px;
   }
 
-  .hospice-content h2 {
-    font-size: 1.4rem;
+  .hospice-text h2,
+  .hospice-text h3,
+  .hospice-text h4 {
     text-align: center;
   }
 
-  .hospice-content ul {
-    font-size: 1.08rem;
-    padding-left: 18px;
-    list-style-type: disc;
-    list-style-position: outside;
+  .hospice-img {
+    justify-content: center;
+    align-items: center;
   }
 
-  .page-heading {
-    font-size: 2.48rem;
-    padding-top: 120px;
-    margin-bottom: 15px;
-    text-align: center;
+  .hospice-img img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hospice-box {
+    border-radius: 0;
+    box-shadow: none;
   }
 
+  .page-heading h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 350px) {
   #phoneBanner {
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 53px !important;
   }
-}
 
-@media (min-width: 350px) and (max-width: 1005px) {
-  body.hospice-page .page-heading {
+  .page-heading h2 {
     padding-top: 40px !important;
-    margin-top: 0 !important;
-    font-size: 2.4rem !important;
-  }
-
-  body.hospice-page #phoneBanner {
-    top: 83px !important;
-  }
-
-  body.hospice-page .hospice-box {
-    padding-top: 12px !important;
   }
 }
-@media (max-width: 350px){
-  .page-heading{
-    padding-top: 150px;
-  }  
 
-}
-@media (max-width: 1000px){
-  .hospice-content h2{
-    padding-top: 20px;
+@media (max-width: 1005px) {
+  .hospice-box {
+    flex-direction: column;
+    padding: 20px 15px;
+    align-items: flex-start; /* Align everything to the left */
+    text-align: left;
+  }
+
+  .hospice-text,
+  .hospice-img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .hospice-text {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .hospice-text ul {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .hospice-text h2,
+  .hospice-text h3,
+  .hospice-text h4 {
+    text-align: left;
+  }
+
+  .hospice-img {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .hospice-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -1922,25 +2470,27 @@ html {
 /* === Home Health Page Section === */
 .service-section {
   background-color: #fff5f5;
-  padding: 35px 20px 80px;
+  padding: 40px 25px 80px;
   max-width: 1200px;
   margin: 40px auto;
   border-radius: 25px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  /* font-family: 'Ysabeau'; */
 }
 
 .service-container {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  align-items: center;
+  align-items: flex-start; /* ensures top alignment for image and text */
   justify-content: center;
 }
 
 .service-image {
   flex: 1 1 45%;
   max-width: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .service-image img {
@@ -1954,39 +2504,35 @@ html {
 .service-content {
   flex: 1 1 50%;
   margin-top: 0px;
+  padding-top: 0px;
 }
 
-.service-content h2 {
-  font-size: 1.88rem;
-  font-weight: bold;
+/* Headings and text handled by global CSS */
+.service-content h2,
+.service-content h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
   color: #2c2c2c;
-  margin-bottom: 20px;
-  
+}
+.hospice-text h4{
+  font-size: var(--subheading-size);
+}
+
+.service-content p,
+.service-content ul {
+  color: #333;
+  line-height: 1.6;
 }
 
 .service-content ul {
-  list-style-type: disc;
   padding-left: 20px;
-  color: #333;
-  line-height: 1.8;
-  font-size: 1.18rem;
 }
 
-.service-content h3 {
-  font-size: 1.38rem;
-  font-weight: bold;
-  color: #2c2c2c;
-  margin-top: 30px;
+.service-content ul li {
+  margin-bottom: 10px;
 }
 
-.service-content p {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.8;
-  margin-top: 20px;
-}
-
-/* Responsive Layout */
+/* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
   .service-container {
     flex-direction: column;
@@ -2006,13 +2552,8 @@ html {
     padding-left: 18px;
   }
 
-  .service-content h2 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
+  .service-content h2,
   .service-content h3 {
-    font-size: 1.2rem;
     text-align: center;
   }
 
@@ -2021,12 +2562,10 @@ html {
   }
 }
 
-
 @media (min-width: 350px) and (max-width: 1005px) {
   body.home-health .page-heading {
     padding-top: 40px !important;
     margin-top: 0 !important;
-    font-size: 2.4rem !important;
   }
 
   body.home-health #phoneBanner {
@@ -2038,11 +2577,17 @@ html {
   }
 }
 
+@media (min-width: 1113px) {
+  .referrals-title {
+    margin-top: 30px;
+  }
+}
+
 
 
 /* Refferals Page */
 .referrals-main {
-  padding: 2rem 1rem;
+  padding: 10px 16px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -2059,33 +2604,6 @@ html {
   box-sizing: border-box;
 }
 
-/* Referrals heading centered and responsive */
-.referrals-title {
-  font-size: 4rem;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 3.5rem;
-  margin-bottom: 1rem;
-  color: #2c2c2c;
-  word-break: break-word;
-  padding: 0 10px;
-}
-
-/* Subtitle text styling */
-
-/* Subtitle styles */
-.referrals-subtitle {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
-  max-width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  white-space: normal;
-  text-overflow: ellipsis;
-  padding: 0 15px;
-  font-family: 'Ysabeau', sans-serif;
-}
 
 .referrals-text {
   max-width: 100%;
@@ -2109,52 +2627,98 @@ html {
   flex: 1 1 500px;
   background-color: #fbeeee;
   border-radius: 20px;
-  padding: 2rem 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-.referral-form h2 {
-  font-size: 1.28rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.referral-form label {
-  display: block;
-  text-align: left;
-  margin: 0.5rem 0 0.25rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0d0d0;
 }
 
 .referral-form input,
-.referral-form textarea {
+.referral-form textarea,
+.referral-form select {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
   margin-bottom: 1rem;
+  font-family: 'Ysabeau', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.referral-form input:focus,
+.referral-form textarea:focus,
+.referral-form select:focus {
+  outline: none;
+  border-color: maroon;
+  box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.referral-form select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+  appearance: none;
 }
 
 .referral-form textarea {
-  min-height: 100px;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.referral-form input[name="OtherService"] {
+  display: none;
+  margin-top: 0.5rem;
+  background-color: #f9f9f9;
+  border-color: #d0d0d0;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.referral-form input[name="OtherService"].show {
+  display: block;
 }
 
 .submit-btn {
-  background-color: #3c2f2f;
+  background: linear-gradient(135deg, black, black);
   color: #fff;
-  padding: 0.5rem 2rem;
+  padding: 15px 30px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(128, 0, 0, 0.3);
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .submit-btn:hover {
-  background-color: #5e4444;
+  background: linear-gradient(135deg, #800000, maroon);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(128, 0, 0, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(128, 0, 0, 0.3);
 }
 
 /* Image block */
 .referral-image-box {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   padding: 0;
   margin-top: 10px;
   display: flex;
@@ -2174,10 +2738,9 @@ html {
 }
 
 .image-caption {
-  font-size: 1.1rem;
   color: #555;
   font-style: italic;
-  line-height: 1.6;
+  /* line-height: 1.3; */
   max-width: 480px;
   margin-top: 8px;
   margin-bottom: 0;
@@ -2191,19 +2754,17 @@ html {
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .referrals-title {
-  font-size: 3rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 3.5rem;
-  margin-bottom: 1rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
   color: #2c2c2c;
   word-break: break-word;
   padding: 0 10px;
 }
   .referrals-subtitle {
-  font-size: 1.2rem;
   color: #555;
-  line-height: 1.6;
+  /* line-height: 1.3; */
   max-width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -2235,7 +2796,7 @@ html {
   .image-caption {
     text-align: center;
     font-size: 1.05rem;
-    line-height: 1.4;
+    /* line-height: 1.3; */
     margin: 6px auto 10px auto;
     padding: 10px 15px;
     max-width: 90%;
@@ -2250,9 +2811,12 @@ html {
   }
 
   .referral-form input,
-  .referral-form textarea {
+  .referral-form textarea,
+  .referral-form select {
     max-width: 100%;
+    font-size: 16px; /* Prevents zoom on iOS */
   }
+  
 
   .referral-form-box h2,
   .referral-form {
@@ -2290,7 +2854,7 @@ html {
     margin: 0 auto 6px auto !important;
     padding: 8px 12px !important;
     font-size: 1rem;
-    line-height: 1.4;
+    /* line-height: 1.3; */
     background: #f9f9f9;
     border-left: 3px solid #d3d3d3;
     border-radius: 5px;
@@ -2323,11 +2887,11 @@ html {
     position:absolute;
   }
   .referrals-main{
-    padding: 120px 0 0 0;
+    padding: 70px 0 0 0;
   }
 
   .referrals-title {
-    font-size: 1.7rem;
+    /* font-size: 2rem; */
     font-weight: 700;
     text-align: center;
     margin-top: 20px;
@@ -2335,13 +2899,13 @@ html {
     color: #2c2c2c;
     word-break: break-word;
     padding: 0 8px;
-    line-height: 1.2;
+    /* line-height: 1.3; */
   }
 
   .referrals-subtitle {
-    font-size: 0.95rem;
+    font-size: var(--body-text-size);
     color: #555;
-    line-height: 1.4;
+    /* line-height: 1.4; */
     text-align: center;
     margin: 0 auto 10px auto;
     padding: 0 10px;
@@ -2361,14 +2925,14 @@ html {
   }
 
   .image-caption {
-    font-size: 0.95rem;
+    font-size: var(--body-text-size);
     text-align: center;
     padding: 8px 12px;
     margin: 0 auto 8px auto;
     background: #f9f9f9;
     border-left: 3px solid #ccc;
     border-radius: 5px;
-    line-height: 1.4;
+    /* line-height: 1.3; */
     max-width: 90%;
   }
 
@@ -2380,13 +2944,13 @@ html {
   }
 
   .referral-form-box h2 {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     margin-bottom: 1rem;
   }
 
   .referral-form input,
   .referral-form textarea {
-    font-size: 0.9rem;
+    font-size: var(--body-text-size);
   }
 }
 
@@ -2394,11 +2958,11 @@ html {
 
 @media (min-width: 769px) and (max-width: 1112px) {
   .referrals-title {
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: 700;
   text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
   color: #2c2c2c;
   word-break: break-word;
   padding: 0 10px;
@@ -2426,7 +2990,7 @@ html {
 /* careers page */
 .career-main {
   position: relative;
-  padding: 190px 40px 60px 40px;
+  padding: 90px 40px 60px 40px;
   background-color: #fef7f7;
   text-align: center;
   z-index: 1;
@@ -2435,12 +2999,18 @@ html {
 
 /* === Page Title === */
 .career-title {
-  font-size: 3rem;
+  font-size: var(--page-heading-size);
   font-weight: 700;
   color: #000;
   margin-bottom: 40px;
+  padding-top: 30px;
 }
 
+@media(max-width:350px){
+  .career-title{
+    padding-top: 2px;
+  }
+}
 /* === Card Container === */
 .career-options {
   display: flex;
@@ -2454,7 +3024,7 @@ html {
   background: white;
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  max-width: 300px;
+  max-width: 400px;
   width: 100%;
   overflow: hidden;
   text-decoration: none;
@@ -2470,7 +3040,7 @@ html {
 
 .career-card img {
   width: 100%;
-  height: 220px;
+  height: 320px;
   object-fit: cover;
 }
 
@@ -2479,7 +3049,7 @@ html {
   background: maroon;
   color: white;
   padding: 15px;
-  font-size: 1.18rem;
+  font-size: var(--nav-text-size);
   font-weight: 600;
   text-align: center;
   display: flex;
@@ -2491,17 +3061,57 @@ html {
 
 /* === Icon inside label === */
 .career-label i {
-  font-size: 1.28rem;
+  font-size: var(--body-text-size);
 }
 
 /* === Responsive Adjustments === */
-@media (max-width: 768px) {
-  .career-main {
-    padding: 190px 20px 40px;
+@media (min-width: 768px) and (max-width: 1495px) {
+  .hero .row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px;
   }
 
+  .hero-left,
+  .hero-right,
+  .col-md-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .hero-left h1 {
+    text-align: center !important;
+  }
+
+  .hero-left p {
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+  }
+
+  .hero-right {
+    margin-top: 20px !important;
+  }
+
+  .hero-right img {
+    width: 90% !important;
+    max-width: 600px !important;
+    height: auto !important;
+    border-radius: 12px;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 768px) {
   .career-title {
-    font-size: 2.2rem;
+    /* font-size: 2.5rem; */
     margin-bottom: 25px;
   }
 
@@ -2510,15 +3120,15 @@ html {
   }
 
   .career-label {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     padding: 12px;
   }
 }
 
 @media (min-width: 1006px) {
-  .career-title {
-    font-size: 2.2rem;
-  }
+  /* .career-title { */
+    /* font-size: 2.5rem; */
+  /* } */
   body.careers-page #phoneBanner {
     display: block !important;
     position: absolute !important;
@@ -2531,10 +3141,11 @@ html {
     visibility: visible !important;
   }
 }
+
 @media (min-width: 350px) and (max-width: 1005px) {
-  .career-title {
-    font-size: 2.2rem;
-  }
+  /* .career-title {
+    font-size: 2.5rem;
+  } */
   body.careers-page #phoneBanner {
     display: block !important;
     position: absolute !important;
@@ -2547,10 +3158,37 @@ html {
     visibility: visible !important;
   }
 }
-@media (min-width: 350px) and (max-width: 1005px) {
-  .career-title {
-    font-size: 2.2rem;
+
+@media (min-width: 830px) and (max-width: 1070px) {
+  .mission-logo {
+    display: block;
+    position: relative;
+    margin: -150px auto 40px auto !important;
+    z-index: 10 !important;
+    width: 160px;
   }
+
+  .info-boxes {
+    background-color: #ddbaba !important;
+    padding-bottom: 160px !important; /* extend background behind logo */
+    margin-bottom: 0 !important;
+    position: relative;
+    z-index: 0 !important;
+  }
+
+  .mission-section {
+    padding-top: 40px !important;
+    margin-top: 0 !important;
+    background-color: #fcecec;
+    position: relative;
+    z-index: 0 !important;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 1005px) {
+  /* .career-title {
+    font-size: 2.5rem;
+  } */
   body.careers-page #phoneBanner {
     display: block !important;
     position: absolute;
@@ -2560,24 +3198,19 @@ html {
     z-index: 9999;
   }
 }
-@media (max-width: 349px) {
+/* @media (max-width: 349px) {
   body.careers-page #phoneBanner {
     top: 50px !important; /* 🧷 move phone banner up closer to header */
-  }
+  /* } */
 
-  .career-main {
+  /* .career-main {
     padding-top: 160px !important; /* 🧷 reduce space below the phone number */
-  }
+  /* } */ */
 
-  .career-title {
+  /* .career-title {
     margin-top: 0 !important; /* 🧷 remove default top margin */
-  }
-}
-
-
-
-
-
+  /* } */ */
+/* } */ */
 
 
 
@@ -2591,10 +3224,15 @@ html {
 
 /* Volunteer section title */
 .volunteer-hero h1 {
-  font-size: 3.3rem;
+  font-size: var(--page-heading-size);
+  padding-top:20px ;
   color: black;
   margin-bottom: 20px;
-  font-family: 'Arima Madurai', cursive;
+  font-family: 'Ysabeau', sans-serif;
+  font-weight: 700px;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 /* Volunteer banner image */
@@ -2613,9 +3251,11 @@ html {
 .volunteer-hero p {
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1.18rem;
+  padding: 20px 30px;
+  font-size: var(--body-text-size);
   color: #333;
-  line-height: 1.6;
+  /* line-height: 1.3; */
+  align-self: center;
 }
 
 /* Outer wrapper background */
@@ -2639,8 +3279,9 @@ html {
 }
 
 .volunteer-form-section h2 {
-  font-family: 'Arima Madurai', cursive;
-  font-size: 1.8rem;
+  font-family: 'Ysabeau', sans-serif;
+  font-weight: 700px;
+  font-size: var(--subheading-size);
   color: #7d2e46;
   text-align: center;
   margin-bottom: 30px;
@@ -2657,6 +3298,7 @@ html {
   font-weight: 500;
   margin-bottom: 4px;
   color: #333;
+  font-size: var(--body-text-size);
 }
 
 .volunteer-form-section input,
@@ -2665,7 +3307,7 @@ html {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: var(--body-text-size);
   font-family: 'Ysabeau', sans-serif;
 }
 
@@ -2674,19 +3316,19 @@ html {
 }
 
 .volunteer-form-section button {
-  background-color: #7d2e46;
+  background-color: black;
   color: white;
   padding: 12px 0;
   border: none;
   border-radius: 8px;
-  font-size: 1.08rem;
+  font-size: var(--button-text-size);
   cursor: pointer;
   margin-top: 20px;
   width: 100%;
 }
 
 .volunteer-form-section button:hover {
-  background-color: #5c1f33;
+  background-color: maroon;
 }
 
 /* Fix phone banner and volunteer spacing */
@@ -2717,35 +3359,44 @@ html {
     position: absolute !important;
     left: 50%;
     transform: translateX(-50%) !important;
-    z-index: 1000 !important;
+    z-index: 9999 !important;
   }
 }
 
 /* Fix heading size for smaller devices */
 @media (max-width: 798px) {
   .volunteer-hero h1 {
-    font-size: 2.2rem;
+    text-align: center;
+    width: 100%;
   }
 }
 
-
+@media (max-width: 480px) {
+  .volunteer-hero h1 {
+    padding: 10px 10px;
+  }
+  
+  .volunteer-form {
+    padding: 30px 20px;
+  }
+}
 
 
 /* Employment Page */
 
 .employment-main {
-  padding: 4rem 1rem;
+  padding: 2rem 1.5rem;
   text-align: center;
 }
 
 .employment-title {
-  font-size: 3.3rem;
+  font-size: var(--page-heading-size);
   font-weight: 700;
   margin-bottom: 1rem;
-  margin: 1.5rem 0 1rem;
+  /* margin-top: -30px; */
 }
 
-.employment-image {
+/* .employment-image {
   max-width: 100%;
   width: 500px;
   height: auto;
@@ -2753,15 +3404,26 @@ html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin: 1rem auto;
   display: block;
+} */
+
+.employment-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 700px;  /* Matches .employment-intro max-width */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .employment-intro {
   max-width: 700px;
   margin: 0 auto 2rem;
   color: #555;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  padding: 0 1rem;
+  font-size: var(--body-text-size);
+  /* line-height: 1.3; */
+  padding: 1rem 1rem;
 }
 
 .form-wrapper-background {
@@ -2780,7 +3442,7 @@ html {
 }
 
 .employment-form h2 {
-  font-size: 1.28rem;
+  font-size: var(--subheading-size);
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -2789,6 +3451,7 @@ html {
   display: block;
   text-align: left;
   margin: 0.75rem 0 0.25rem;
+  font-size: var(--body-text-size);
 }
 
 .employment-form input,
@@ -2798,6 +3461,7 @@ html {
   border: 1px solid #ccc;
   border-radius: 6px;
   margin-bottom: 1rem;
+  font-size: var(--body-text-size);
 }
 
 .employment-form textarea {
@@ -2817,28 +3481,171 @@ html {
 .submit-btn:hover {
   background-color: #5e4444;
 }
-@media (max-width: 1006px) {
+/* @media (max-width: 1006px) {
   .employment-title{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
-}
+} */
 
 @media (max-width: 350px) {
   #phoneBanner {
-    top: 60px !important;
+    top: 50px !important;
     position: absolute !important;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
+    z-index: 9999;
   }
 
   .employment-main {
-    padding-top: 150px !important; /* push the heading down */
+    padding-top: 80px !important; /* push the heading down */
   }
 
   .employment-title {
     margin-top: 0 !important;
-    font-size: 2rem;
+    /* font-size: 2.2rem; */
     text-align: center;
   }
+}
+
+/* ========================================
+   GOOGLE TRANSLATE - HIDE DEFAULT UI
+   ======================================== */
+
+/* Hide the entire Google Translate widget container */
+#google_translate_element {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide Google Translate dropdown/select */
+.goog-te-combo {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide Google Translate banner */
+.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide "Powered by Google Translate" text */
+.goog-te-gadget {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide Google Translate toolbar */
+.goog-te-ftab {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide any Google Translate related elements */
+.goog-te-menu-value,
+.goog-te-menu-frame,
+.goog-te-menu2,
+.goog-te-balloon-frame,
+.goog-te-spinner-pos {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide the top frame that Google Translate sometimes adds */
+body > .skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide the Google Translate iframe */
+iframe.goog-te-menu-frame,
+iframe.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+/* Remove any margin/padding that Google Translate might add to body */
+body {
+  top: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure no Google Translate elements are visible anywhere */
+[id*="google_translate"],
+[class*="goog-te"],
+[class*="skiptranslate"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide any remaining Google Translate UI elements */
+.goog-te-gadget-simple,
+.goog-te-gadget-icon,
+.goog-te-gadget-simple .goog-te-menu-value,
+.goog-te-gadget-simple .goog-te-menu-value span,
+.goog-te-gadget-simple .goog-te-menu-value span:first-child {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Additional cleanup for any lingering elements */
+div[id*="google_translate_element"],
+div[class*="goog-te"],
+span[class*="goog-te"],
+table[class*="goog-te"],
+td[class*="goog-te"],
+tr[class*="goog-te"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+.goog-te-combo {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.no-default-arrow::after {
+  display: none !important;
+}
+
+.page-wrapper {
+  transform: none !important;
+}
+
+.sitemap-container a {
+    color: #0073e6;
+    text-decoration: none;
+}
+.sitemap-container a:hover {
+    text-decoration: underline;
 }

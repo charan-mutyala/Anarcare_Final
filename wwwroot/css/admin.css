@@ -1,0 +1,6 @@
+/* Force word-wrap on the Message column in admin tables */
+td:nth-child(4) {
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 300px;
+}

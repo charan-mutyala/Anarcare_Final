@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AnarcareWeb.Models
@@ -7,17 +8,18 @@ namespace AnarcareWeb.Models
         public int Id { get; set; }
 
         [Required]
-        public string ReferrerName { get; set; }
+        public string ReferrerName { get; set; } = string.Empty;
 
         [Required]
-        public string ReferrerPhone { get; set; }
+        public string PatientName { get; set; } = string.Empty;
 
         [Required]
-        public string PatientName { get; set; }
+        public string Phone { get; set; } = string.Empty;
 
-        [Required]
-        public string PatientPhone { get; set; }
+        public string ServicesNeeded { get; set; } = string.Empty;
 
         public string? Comments { get; set; }
+
+        public DateTime SubmittedAt { get; set; } = DateTime.Now;
     }
 }

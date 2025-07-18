@@ -1,12 +1,12 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Home Page";
 }
 
 <main>
     <section class="hero">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 hero-left" data-aos="fade-right">
+            <div class="row">
+                <div class="hero-left" data-aos="fade-right">
                     <h1>
                         <span class="hero-line">AT <span class="highlight">ANAR</span><span class="highlight-red">CARE</span></span>
                         <span class="hero-line">WE <span class="highlight-red">CARE</span></span>
@@ -25,38 +25,38 @@
     </section>
 
 
-    <section class="services">
-        <h2>What We Offer:</h2>
-        <div class="card-container">
-            <a asp-controller="AboutUs" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="0">
-                <img src="~/images/aboutus.webp" alt="About Us" loading="lazy" />
-                <p>About Us</p>
-            </a>
-            <a asp-controller="HospiceCare" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="~/images/Hospice-care.webp" alt="Hospice Care" loading="lazy" />
-                <p>Hospice Care</p>
-            </a>
-            <a asp-controller="HomeHealth" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="~/images/Home-health.webp" alt="Home Health" loading="lazy" />
-                <p>Home Health</p>
-            </a>
-            <a asp-controller="Referrals" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="~/images/Refferals.webp" alt="Referrals" loading="lazy" />
-                <p>Referrals</p>
-            </a>
-            <a asp-controller="Career" asp-action="Index" class="service-card" data-aos="fade-up" data-aos-delay="400">
-                <img src="~/images/Careerseekers.webp" alt="Career Seekers" loading="lazy" />
-                <p>Career Seekers</p>
-            </a>
-            <a href="#contact" class="service-card" data-aos="fade-up" data-aos-delay="500">
-                <img src="~/images/Contactus.webp" alt="Contact Us" loading="lazy" />
-                <p>Contact Us</p>
-            </a>
-        </div>
-    </section>
+   <section class="services">
+    <h2>What We Offer:</h2>
+    <div class="card-container">
+        <a asp-controller="Home" asp-action="AboutUs" class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <img src="~/images/aboutus.webp" alt="About Us" loading="lazy" />
+            <p>About Us</p>
+        </a>
+        <a asp-controller="Home" asp-action="HospiceCare" class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="~/images/Hospice_care_9.webp" alt="Hospice Care" loading="lazy" />
+            <p>Hospice Care</p>
+        </a>
+        <a asp-controller="Home" asp-action="HomeHealth" class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="~/images/home_1.webp" alt="Home Health" loading="lazy" />
+            <p>Home Health</p>
+        </a>
+        <a asp-controller="Home" asp-action="Referrals" class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="~/images/Refferals.webp" alt="Referrals" loading="lazy" />
+            <p>Referrals</p>
+        </a>
+        <a asp-controller="Home" asp-action="Employment" class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <img src="~/images/Careerseekers.webp" alt="Career Seekers" loading="lazy" />
+            <p>Career Seekers</p>
+        </a>
+        <a href="#contact" class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <img src="~/images/Contactus.webp" alt="Contact Us" loading="lazy" />
+            <p>Contact Us</p>
+        </a>
+    </div>
+</section>
 
     <section class="info-boxes">
-        <a asp-controller="HospiceCare" asp-action="Index" class="clickable-box" data-aos="fade-up">
+        <a asp-controller="Home" asp-action="HospiceCare" class="clickable-box" data-aos="fade-up">
             <img src="~/images/Hospicecare_icon.webp" alt="Hospice Icon" class="info-icon" loading="lazy" />
             <ul>
                 <li>Pain and symptom management</li>
@@ -69,7 +69,7 @@
             <span class="info-button">Learn more</span>
         </a>
 
-        <a asp-controller="HomeHealth" asp-action="Index" class="clickable-box" data-aos="fade-up" data-aos-delay="100">
+        <a asp-controller="Home" asp-action="HomeHealth" class="clickable-box" data-aos="fade-up" data-aos-delay="100">
             <img src="~/images/homehealth_icon.webp" alt="Home Health Icon" class="info-icon" loading="lazy" />
             <ul>
                 <li>Wound Care, skilled nursing</li>
@@ -85,7 +85,7 @@
 
     <section class="mission-section">
         <div class="mission-content" data-aos="fade-in">
-            <img src="~/images/logoanarcare.png" alt="Anarcare Heart Logo" class="mission-logo" loading="lazy" />
+            <img src="~/images/logo-anarcare.webp" alt="Anarcare Heart Logo" class="mission-logo" loading="lazy" />
             <div class="mission-text">
                 <p>
                     We strive to provide the highest quality of home health and hospice services. Our compassionate professionals are devoted to ensuring the best care for our community. Our agency is committed to helping our patients live life to the fullest in a secured and familiar surrounding, with the people who matter the most.
@@ -94,14 +94,15 @@
         </div>
     </section>
 
-    <section class="contact-section" id="contact">
+    <section class="contact-section" id="contact" style="padding-top: 120px; margin-top: -120px;">
         <div class="contact-form" data-aos="fade-right">
             @if (TempData["Success"] != null)
-{
-    <div class="alert alert-success">@TempData["Success"]</div>
-}
+                {
+                    <div class="alert alert-success">@TempData["Success"]</div>
+                }
 
-            <form asp-action="SubmitContact" asp-controller="Home" method="post">
+            <form id="contactForm" asp-action="SubmitContact" asp-controller="Home" method="post">
+
 
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your full name.." required />
@@ -150,9 +151,13 @@
             width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <div class="map-note-container">
-            <p class="map-note">
-                Let us care for your loved ones as if they were our own. Contact Anarcare today to learn more about our services and how we can support you and your family. Serving Houston & Surrounding Area
+            <p class="map-note main-text">
+                Let us care for your loved ones as if they were our own. Contact Anarcare today to learn more about our services and how we can support you and your family.
             </p>
-        </div>
+            <p class="map-note serving-text">
+                Serving Houston & Surrounding Areas.
+            </p>
+            </div>
+
     </section>
 </main>

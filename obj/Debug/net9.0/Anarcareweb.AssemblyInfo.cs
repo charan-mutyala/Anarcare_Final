@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anarcareweb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd9c9c5e2cad3a31c46b81689b38e640bcedbc89")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anarcareweb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anarcareweb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

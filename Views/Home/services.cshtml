@@ -1,41 +1,24 @@
 @{
     ViewData["Title"] = "Our Services";
-    ViewData["BodyClass"] = "services-page";
+    ViewData["BodyClass"] = "careers-page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<main>
-    <section class="services-overview">
-        <h1>Our Services</h1>
-
-        <div class="info-boxes services-page">
-            <!-- Hospice Box -->
-            <a asp-controller="Home" asp-action="hospicecare" class="info-box clickable-box" data-aos="fade-up">
-                <img src="~/images/Hospicecare_icon.webp" alt="Hospice Icon" class="info-icon" loading="lazy" />
-                <ul>
-                    <li>Pain and symptom management</li>
-                    <li>Medications related to personal illness</li>
-                    <li>Physician and nurse on call 24/7</li>
-                    <li>Speech, physical, occupational therapy</li>
-                    <li>Spiritual and dietary therapy</li>
-                    <li>Bereavement Services</li>
-                </ul>
-                <div class="info-button">Learn more:</div>
+<main class="career-main">
+    <section class="career-section">
+        <h1 class="career-title">Our Services</h1>
+        <div class="career-options">
+            <a asp-controller="Home" asp-action="hospicecare" class="career-card">
+                <img src="~/images/aboutus_2.webp" alt="Employment at Anarcare" />
+                <div class="career-label">
+                    Hospice Care
+                </div>
             </a>
-
-            <!-- Home Health Box -->
-            <a asp-controller="Home" asp-action="homehealth" class="info-box clickable-box" data-aos="fade-up" data-aos-delay="100">
-                <img src="~/images/homehealth_icon.webp" alt="Home Health Icon" class="info-icon" loading="lazy" />
-                <ul>
-                    <li>Wound Care, skilled nursing</li>
-                    <li>Home Health Aide</li>
-                    <li>Conditions and Diseases</li>
-                    <li>Medication Management</li>
-                    <li>Diabetic Teaching and Management</li>
-                    <li>Physical, Occupational, Speech Therapy</li>
-                </ul>
-                <div class="info-button">Learn more:</div>
+            <a asp-controller="Home" asp-action="homehealth" class="career-card">
+                <img src="~/images/home_1.webp" alt="Volunteering at Anarcare" />
+                <div class="career-label">
+                    Home Health 
+                </div>
             </a>
         </div>
     </section>

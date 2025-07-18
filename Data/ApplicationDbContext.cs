@@ -11,8 +11,9 @@ namespace AnarcareWeb.Data
         }
 
         public DbSet<ContactMessage> ContactMessages { get; set; }
-        public DbSet<Referral> Referrals { get; set; }
         public DbSet<Employment> Employments { get; set; }
         public DbSet<Volunteer> Volunteers { get; set; }
+        public DbSet<Referral> Referrals { get; set; }
+        public DbSet<AdminUser> AdminUsers { get; set; }
     }
 }

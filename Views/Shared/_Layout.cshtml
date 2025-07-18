@@ -8,15 +8,11 @@
     <meta name="author" content="Anarcare Team" />
     <title>@ViewData["Title"] - Anarcare</title>
 
-    <!-- Bootstrap CSS (from LibMan) -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-    <!-- Default ASP.NET styles -->
+    <!-- App Styles -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Anarcareweb.styles.css" asp-append-version="true" />
-
-    <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,79 +26,130 @@
 
     @RenderSection("Styles", required: false)
 </head>
+
 <body class="@ViewData["BodyClass"]">
-    <header class="top-header sticky">
-        <div class="logo">
-            <img src="~/images/logotype_new.png" alt="Anarcare Logo" />
-        </div>
-        <div class="mobile-toggle" id="mobileToggle">
-            <i class="bi bi-list" id="toggleIcon"></i>
-        </div>
-        <nav class="main-nav" id="mainNav">
+    <button class="accessibility-tab" onclick="toggleAccessibilityView()" title="Toggle Accessibility View">
+        ♿ Accessibility View
+    </button>
+    <div class="page-wrapper">
+        <!-- === HEADER === -->
+        <header class="top-header sticky">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Index">
+                    <img src="~/images/final_logo.webp" alt="Anarcare Logo" />
+                </a>
+            </div>
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="bi bi-list" id="toggleIcon"></i>
+            </div>
+            <nav class="main-nav" id="mainNav">
             <ul>
                 <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                 <li><a asp-controller="Home" asp-action="aboutus">About Us</a></li>
+
+                <!-- Services Dropdown -->
                 <li class="dropdown">
-                    <div class="dropdown-wrapper">
-                        <a asp-controller="Home" asp-action="services" class="dropdown-link">Services</a>
-                        <button class="dropdown-toggle" aria-label="Toggle services submenu">▼</button>
-                    </div>
-                    <ul class="dropdown-content">
-                        <li><a asp-controller="Home" asp-action="hospicecare">Hospice Care</a></li>
-                        <li><a asp-controller="Home" asp-action="homehealth">Home Health</a></li>
-                    </ul>
+                <div class="dropdown-wrapper">
+                    <a asp-controller="Home" asp-action="services" class="dropdown-link">Services</a>
+                    <button class="dropdown-toggle" aria-label="Toggle Services dropdown">
+                        <i class="bi bi-chevron-down arrow-icon"></i>
+                    </button>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a asp-controller="Home" asp-action="hospicecare">Hospice Care</a></li>
+                    <li><a asp-controller="Home" asp-action="homehealth">Home Health</a></li>
+                </ul>
                 </li>
+
                 <li><a asp-controller="Home" asp-action="referrals">Referrals</a></li>
+
+                <!-- Careers Dropdown -->
                 <li class="dropdown">
-                    <div class="dropdown-wrapper">
-                        <a asp-controller="Home" asp-action="careers" class="dropdown-link">Careers</a>
-                        <button class="dropdown-toggle" aria-label="Toggle services submenu">▼</button>
-                    </div>
-                    <ul class="dropdown-content">
-                        <li><a asp-controller="Home" asp-action="employment">Employment</a></li>
-                        <li><a asp-controller="Home" asp-action="volunteer">Volunteer</a></li>
-                    </ul>
+                <div class="dropdown-wrapper">
+                    <a asp-controller="Home" asp-action="careers" class="dropdown-link">Careers</a>
+                    <button class="dropdown-toggle" aria-label="Toggle Careers dropdown">
+                        <i class="bi bi-chevron-down arrow-icon"></i>
+                    </button>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a asp-controller="Home" asp-action="employment">Employment</a></li>
+                    <li><a asp-controller="Home" asp-action="volunteer">Volunteer</a></li>
+                </ul>
                 </li>
+
                 <li><a href="@Url.Action("Index", "Home")#contact">Contact Us</a></li>
             </ul>
-        </nav>
-    </header>
+            </nav>
 
-    <div class="center-phone" id="phoneBanner">
-        <a href="tel:7133301964" class="phone">
-            <i class="bi bi-telephone-fill"></i>(713) 330-1964
-        </a>
+        </header>
+
+        <!-- Phone Banner -->
+        <div class="center-phone" id="phoneBanner">
+            <a href="tel:7133301964" class="phone">
+                <i class="bi bi-telephone-fill"></i>(713) 330-1964
+            </a>
+        </div>
+
+        <!-- 🌐 Google Translate Button -->
+        <div class="translate-container">
+            <button id="toggleTranslatePopup" aria-label="Toggle language menu">🌐</button>
+            <div class="custom-language-popup" id="languagePopup">
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="es">Spanish</button>
+            </div>
+        </div>
+
+        <!-- Google Translate Widget -->
+        <div id="google_translate_element"></div>
+        
+        <main>
+            @RenderBody()
+        </main>
+
+        <!-- === FOOTER === -->
+        <footer class="clean-footer">
+            <div class="footer-container">
+                <div class="footer-bottom-row">
+                    <div class="footer-links">
+                        <a asp-controller="Home" asp-action="sitemap">Site Map</a>
+                        <a asp-controller="Admin" asp-action="Login">Admin Login</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/patricia.janki.98" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/janki_pa" target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/pat-janki-4a198a8/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">© 2025 Anarcare. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
 
-    @RenderBody()
-
-    <footer class="clean-footer">
-        <div class="footer-container">
-            <div class="footer-bottom-row">
-                <div class="footer-links">
-                    <a asp-controller="Sitemap" asp-action="Index">Site Map</a>
-                </div>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/patricia.janki.98" target="_blank"><i class="bi bi-facebook"></i></a>
-                    <a href="https://x.com/janki_pa" target="_blank"><i class="bi bi-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/pat-janki-4a198a8/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                </div>
-            </div>
-            <p class="copyright">© 2025 Anarcare. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript files -->
+    <!-- === JS Files === -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: false });</script>
+
+    <!-- ✅ Google Translate -->
     <script>
-        AOS.init({ duration: 1000, once: false });
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es'
+            }, 'google_translate_element');
+        }
     </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- ✅ Your App Scripts -->
     <script src="~/js/script.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Skip to Content -->
+    <a href="#mainContent" class="skip-link visually-hidden-focusable">Skip to main content</a>
 </body>
 </html>

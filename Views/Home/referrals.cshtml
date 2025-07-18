@@ -6,7 +6,7 @@
 
 <main class="referrals-main">
     <!-- Title and Subtitle -->
-    <h1 class="referrals-title">Referrals</h1>
+    <h1 class="referrals-title">Intake Form</h1>
 
     <!-- Subtitle aligned under form -->
     <section class="referrals-header">
@@ -32,25 +32,41 @@
                     <div class="alert alert-success">@TempData["Success"]</div>
                 }
             <form class="referral-form" method="post" asp-action="SubmitReferral">
-                <h2>Patient's Referral Form</h2>
+            <h2>Patient's Referral Form</h2>
 
-                <label for="referrer-name">Referral’s name</label>
-                <input type="text" id="referrer-name" name="ReferrerName" placeholder="Name" required />
+            <label for="patient-name">Patient’s name</label>
+            <input type="text" id="patient-name" name="PatientName" placeholder="Name" required />
 
-                <label for="referrer-phone">Referral’s phone</label>
-                <input type="tel" id="referrer-phone" name="ReferrerPhone" placeholder="Phone Number" required />
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="Phone" placeholder="Phone Number" required />
 
-                <label for="patient-name">Patient’s name</label>
-                <input type="text" id="patient-name" name="PatientName" placeholder="Name" required />
+            <label for="referral-parties-name">Referral’s party name</label>
+            <input type="text" id="referral-parties-name" name="ReferrerName" placeholder="Name" required />
+            
+            <label for="services">Services Needed:</label>
+            <select name="ServicesNeeded" id="services" required>
+                <option value="">-- Select a Service --</option>
+                <option value="Skilled Nursing">Skilled Nursing</option>
+                <option value="Medical Social Worker">Medical Social Worker</option>
+                <option value="Home Health Aides">Home Health Aides</option>
+                <option value="Occupational Therapy">Occupational Therapy</option>
+                <option value="Physical Therapy">Physical Therapy</option>
+                <option value="Speech Therapy">Speech Therapy</option>
+                <option value="Chaplain or Spiritual Counselor">Chaplain or Spiritual Counselor</option>
+                <option value="Counseling">Counseling</option>
+                <option value="DME">DME</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <input type="text" id="other-service" name="OtherService" placeholder="Specify other service" />
 
-                <label for="patient-phone">Patient’s phone</label>
-                <input type="tel" id="patient-phone" name="PatientPhone" placeholder="Phone Number" required />
 
-                <label for="comments">Comments:</label>
-                <textarea id="comments" name="Comments" placeholder="Tell us what do you want to know"></textarea>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="Comments" placeholder="Tell us what do you want to know"></textarea>
 
-                <button type="submit" class="submit-btn">SUBMIT</button>
-            </form>
+            <button type="submit" class="submit-btn">SUBMIT</button>
+        </form>
+
         </div>
     </section>
 </main>
